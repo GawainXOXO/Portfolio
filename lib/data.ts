@@ -37,6 +37,13 @@ export const ABOUT: L[] = [
   },
 ];
 
+export const FACTS: { label: L; value: L }[] = [
+  { label: { id: "Status", en: "Status" }, value: { id: "IT Digital Intern, terbuka untuk peluang kerja", en: "IT Digital Intern, open to job opportunities" } },
+  { label: { id: "Kuliah", en: "Education" }, value: { id: "Computer Science, Software Engineering — BINUS", en: "Computer Science, Software Engineering — BINUS" } },
+  { label: { id: "Fokus", en: "Focus" }, value: { id: "Testing & UAT, CI/CD, machine learning", en: "Testing & UAT, CI/CD, machine learning" } },
+  { label: { id: "Lokasi", en: "Location" }, value: { id: "Indonesia", en: "Indonesia" } },
+];
+
 export const SKILLS: { group: L; items: string[] }[] = [
   { group: { id: "Testing & QA", en: "Testing & QA" }, items: ["UAT", "Functional & UI/UX Testing", "Workflow Testing", "Test Case Design", "SDLC", "AI-Assisted Test Generation"] },
   { group: { id: "DevOps & Infrastruktur", en: "DevOps & Infrastructure" }, items: ["Jenkins", "Kubernetes", "Git", "CI/CD"] },

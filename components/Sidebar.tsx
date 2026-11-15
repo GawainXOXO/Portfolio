@@ -9,6 +9,7 @@ import { Pixel } from "./Pixel";
 const items = [
   ["home", "/", "win"],
   ["about", "/about", "info"],
+  ["journey", "/journey", "floppy"],
   ["projects", "/projects", "folder"],
   ["achievements", "/achievements", "star"],
   ["uses", "/uses", "disc"],

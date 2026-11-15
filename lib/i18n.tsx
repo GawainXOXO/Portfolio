@@ -6,6 +6,7 @@ export const UI = {
   nav: {
     home: { id: "Beranda", en: "Home" },
     about: { id: "Tentang", en: "About" },
+    journey: { id: "My Journey", en: "My Journey" },
     projects: { id: "Proyek", en: "Projects" },
     achievements: { id: "Prestasi", en: "Achievements" },
     uses: { id: "Peralatan", en: "Uses" },
@@ -21,6 +22,9 @@ export const UI = {
   featured: { id: "Proyek pilihan", en: "Featured projects" },
   allProjects: { id: "Semua proyek", en: "All projects" },
   back: { id: "Kembali", en: "Back" },
+  journeyLead: { id: "Perjalananku di dunia teknologi, dari yang terbaru ke yang terlama.", en: "My path in tech, from newest to oldest." },
+  facts: { id: "Fakta singkat", en: "Quick facts" },
+  kindsJ: { work: { id: "Kerja", en: "Work" }, study: { id: "Kuliah", en: "Study" }, org: { id: "Organisasi", en: "Organization" }, cert: { id: "Sertifikat", en: "Certificate" }, comp: { id: "Lomba", en: "Competition" } },
   story: { id: "Cerita singkat", en: "Short story" },
   career: { id: "Pengalaman", en: "Experience" },
   education: { id: "Pendidikan", en: "Education" },
