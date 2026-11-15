@@ -29,7 +29,17 @@ function Controls() {
   return (
     <div className="flex gap-2">
       <button className={btn} onClick={() => setLang(lang === "id" ? "en" : "id")} aria-label="Ganti bahasa">{lang === "id" ? "EN" : "ID"}</button>
-      <button className={btn} onClick={toggle} aria-label="Ganti tema" title={dark ? "Mode siang" : "Mode malam"}>{dark ? <Pixel name="sun" size={2} /> : <Pixel name="moon" size={2} />}</button>
+      <button
+        onClick={toggle}
+        role="switch"
+        aria-checked={dark}
+        aria-label={dark ? "Mode malam aktif, ganti ke siang" : "Mode siang aktif, ganti ke malam"}
+        className="switch"
+      >
+        <span className="ico l"><Pixel name="sun" size={2} /></span>
+        <span className="ico r"><Pixel name="moon" size={2} /></span>
+        <span className="thumb"><Pixel name={dark ? "moon" : "sun"} size={2} /></span>
+      </button>
     </div>
   );
 }
