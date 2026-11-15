@@ -4,9 +4,27 @@ import {
   SiTailwindcss, SiBootstrap, SiC, SiJenkins, SiKubernetes, SiGit, SiJira, SiFigma,
 } from "react-icons/si";
 import {
-  FaJava, FaFileExcel, FaChartBar, FaDatabase, FaSyncAlt, FaClipboardCheck, FaFilePowerpoint, FaPaintBrush,
+  FaJava, FaFileExcel, FaChartBar, FaDatabase, FaSyncAlt, FaClipboardCheck, FaFilePowerpoint,
   FaComments, FaBrain, FaUsers, FaClock, FaFlag,
 } from "react-icons/fa";
+
+// react-icons tidak punya logo Canva, jadi digambar manual: lingkaran gradasi teal-ungu dengan huruf "c" putih.
+const CanvaIcon: IconType = ({ size = 24 }) => (
+  <svg width={size} height={size} viewBox="0 0 32 32" aria-hidden="true">
+    <defs>
+      <linearGradient id="canva-g" x1="4" y1="28" x2="28" y2="4" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stopColor="#00C4CC" />
+        <stop offset="0.55" stopColor="#4F6BED" />
+        <stop offset="1" stopColor="#7D2AE8" />
+      </linearGradient>
+    </defs>
+    <circle cx="16" cy="16" r="15" fill="url(#canva-g)" />
+    <path
+      d="M21.2 12.6c-1.1-1.5-2.8-2.4-4.7-2.4-3.4 0-6 2.7-6 5.9 0 3.3 2.6 5.8 5.7 5.8 2.3 0 4.2-1.3 5.2-3.3"
+      fill="none" stroke="#fff" strokeWidth="2.6" strokeLinecap="round"
+    />
+  </svg>
+);
 
 // color: warna brand; "currentColor" untuk logo gelap agar tetap terbaca di mode malam.
 const MAP: Record<string, [IconType, string]> = {
@@ -36,7 +54,7 @@ const MAP: Record<string, [IconType, string]> = {
   "UAT & QA Testing": [FaClipboardCheck, "#16A34A"],
   Figma: [SiFigma, "#F24E1E"],
   PowerPoint: [FaFilePowerpoint, "#D24726"],
-  Canva: [FaPaintBrush, "#00C4CC"],
+  Canva: [CanvaIcon, "#00C4CC"],
   Communication: [FaComments, "#0F766E"],
   "Problem Solving": [FaBrain, "#7C3AED"],
   Teamwork: [FaUsers, "#0369A1"],
