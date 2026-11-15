@@ -5,9 +5,9 @@ import { Block, PageTitle } from "@/components/Section";
 
 function Logo({ src, name }: { src: string; name: string }) {
   return (
-    <span className="card-in flex h-14 w-24 shrink-0 items-center justify-center !bg-white p-1.5">
+    <span className="card-in flex h-14 min-w-14 max-w-28 shrink-0 items-center justify-center !bg-white p-2">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={src} alt={`Logo ${name}`} className="max-h-full max-w-full object-contain" loading="lazy" />
+      <img src={src} alt={`Logo ${name}`} className="max-h-full w-auto max-w-full object-contain" loading="lazy" />
     </span>
   );
 }
