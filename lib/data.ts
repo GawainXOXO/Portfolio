@@ -32,8 +32,8 @@ export const ABOUT: L[] = [
     en: "I'm a Computer Science student at Bina Nusantara University (Software Engineering specialization) with hands-on experience in application testing, UAT, and release support across enterprise systems. I'm currently an IT Digital Intern at Sinar Mas Agribusiness and Food, bridging business teams and developers on an ITSM platform through workflow testing, issue tracking, technical documentation, and operational data analysis.",
   },
   {
-    id: "Sebelumnya aku mendukung 100+ proyek UAT lewat otomasi CI/CD (Jenkins, Kubernetes, Git) di industri keuangan. Aku juga punya dasar kuat di Machine Learning dan computer vision lewat riset sistem pengenalan cerdas, termasuk skripsi tentang pengenalan Bahasa Isyarat Indonesia.",
-    en: "Previously I supported 100+ UAT projects through CI/CD automation (Jenkins, Kubernetes, Git) in financial services. I also have a strong foundation in Machine Learning and computer vision through research on intelligent recognition systems, including my thesis on Indonesian Sign Language recognition.",
+    id: "Sebelumnya aku mendukung banyak proyek UAT lewat otomasi CI/CD (Jenkins, Kubernetes, Git) di industri keuangan. Aku juga punya dasar kuat di Machine Learning dan computer vision lewat riset sistem pengenalan cerdas, termasuk skripsi tentang pengenalan Bahasa Isyarat Indonesia.",
+    en: "Previously I supported many UAT projects through CI/CD automation (Jenkins, Kubernetes, Git) in financial services. I also have a strong foundation in Machine Learning and computer vision through research on intelligent recognition systems, including my thesis on Indonesian Sign Language recognition.",
   },
 ];
 
@@ -115,9 +115,9 @@ export const EXPERIENCE: { period: string; title: L; org: string; desc: L; point
     },
     points: [
       { id: "Merancang dan memelihara pipeline CI/CD Jenkins terintegrasi Kubernetes untuk mengotomasi deployment web service.", en: "Designed and maintained Jenkins CI/CD pipelines integrated with Kubernetes to automate web service deployments." },
-      { id: "Mendukung 100+ proyek UAT dengan zero downtime selama pengujian.", en: "Supported 100+ UAT projects with zero downtime during testing." },
-      { id: "Mengoptimalkan alur deployment dan kesiapan UAT, berkontribusi pada KPI divisi dengan peningkatan performa hingga 4× dibanding baseline.", en: "Optimized deployment workflows and UAT readiness, contributing to division KPIs with up to 4× performance improvement over baseline." },
-      { id: "Membantu rilis produksi dengan tingkat keberhasilan tepat jadwal sekitar 75%.", en: "Assisted production releases with an approximately 75% on-schedule success rate." },
+      { id: "Mendukung banyak proyek UAT dan memastikan kesiapan fitur serta eksekusi deployment berjalan mulus.", en: "Supported many UAT projects, ensuring feature readiness and smooth deployment execution." },
+      { id: "Mengoptimalkan alur deployment dan kesiapan UAT, berkontribusi pada pencapaian KPI divisi lewat peningkatan performa yang signifikan.", en: "Optimized deployment workflows and UAT readiness, contributing to division KPI achievement through significant performance improvements." },
+      { id: "Membantu rilis produksi dengan deployment yang tepat jadwal.", en: "Assisted production releases with on-schedule deployments." },
       { id: "Ikut integrasi end-to-end sistem enterprise, serta menyiapkan dan memvalidasi data (nasabah, pengguna, pinjaman, pembayaran) untuk skenario UAT.", en: "Took part in end-to-end enterprise system integration, and prepared and validated data (customer, user, loan, payment) for UAT scenarios." },
     ],
   },
@@ -130,9 +130,9 @@ export const EXPERIENCE: { period: string; title: L; org: string; desc: L; point
       en: "Managed BNCC social media and media partnerships.",
     },
     points: [
-      { id: "Mengelola Instagram BNCC (6.000+ pengikut) dan membuat Reels dengan total 40.000+ penonton.", en: "Managed BNCC's Instagram (6,000+ followers) and produced Reels with 40,000+ total views." },
+      { id: "Mengelola Instagram BNCC dan membuat konten Reels yang menjangkau banyak penonton.", en: "Managed BNCC's Instagram and produced Reels content that reached a wide audience." },
       { id: "Menyusun standar pembuatan konten dan memastikan konten sesuai SOP.", en: "Created content standards and ensured posts followed the SOP." },
-      { id: "Berkontribusi pada 60+ kemitraan media dalam 2 kuartal.", en: "Contributed to 60+ media partnerships within 2 quarters." },
+      { id: "Berkontribusi pada banyak kemitraan media dalam waktu singkat.", en: "Contributed to many media partnerships in a short time." },
     ],
   },
 ];

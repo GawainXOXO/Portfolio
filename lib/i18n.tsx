@@ -12,8 +12,8 @@ export const UI = {
     contact: { id: "Kontak", en: "Contact" },
   },
   ticker: {
-    id: "★ terbuka untuk magang & kolaborasi ★ klik menu di kiri untuk menjelajah ★ dibuat dengan Next.js ★",
-    en: "★ open to internships & collaboration ★ use the menu on the left to explore ★ built with Next.js ★",
+    id: "★ terbuka untuk pekerjaan & kolaborasi ★ klik menu di kiri untuk menjelajah ★ dibuat dengan Next.js ★",
+    en: "★ open to work & collaboration ★ use the menu on the left to explore ★ built with Next.js ★",
   },
   loading: { id: "memuat portfolio.exe", en: "loading portfolio.exe" },
   hello: { id: "Halo, saya", en: "Hi, I'm" },
@@ -37,8 +37,8 @@ export const UI = {
   repo: { id: "Kode", en: "Source" },
   contactTitle: { id: "Mari ngobrol", en: "Let's talk" },
   contactLead: {
-    id: "Terbuka untuk magang, kolaborasi, dan proyek freelance.",
-    en: "Open to internships, collaboration, and freelance work.",
+    id: "Terbuka untuk peluang kerja, kolaborasi, dan proyek freelance.",
+    en: "Open to job opportunities, collaboration, and freelance work.",
   },
   form: {
     name: { id: "Nama", en: "Name" },
