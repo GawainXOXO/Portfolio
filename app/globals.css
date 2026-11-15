@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #f6f1e7;
+  --surface: #fffaf0;
+  --ink: #1d1b16;
+  --muted: #6b645a;
+  --line: #ddd3bf;
+  --accent: #d9480f;
+}
+.dark {
+  --bg: #12110e;
+  --surface: #1b1a15;
+  --ink: #f1ebdd;
+  --muted: #a39b8b;
+  --line: #2f2c24;
+  --accent: #ff8a4c;
+}
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-head), ui-serif, Georgia, serif;
+  --font-mono: var(--font-code), ui-monospace, monospace;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-sans); }
+::selection { background: var(--accent); color: var(--bg); }
+
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.rise { animation: rise .7s cubic-bezier(.2,.7,.2,1) both; }
+@media (prefers-reduced-motion: reduce) { .rise { animation: none; } html { scroll-behavior: auto; } }
