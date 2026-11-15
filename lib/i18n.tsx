@@ -25,6 +25,7 @@ export const UI = {
   story: { id: "Cerita singkat", en: "Short story" },
   career: { id: "Pengalaman", en: "Experience" },
   education: { id: "Pendidikan", en: "Education" },
+  all: { id: "Semua", en: "All" },
   skillsLead: { id: "Teknologi dan kemampuan yang kupakai.", en: "Technologies and abilities I work with." },
   cv: { preview: { id: "Lihat CV", en: "Preview CV" }, download: { id: "Unduh CV", en: "Download CV" } },
   demo: { id: "Demo", en: "Live demo" },
