@@ -10,6 +10,7 @@ const items = [
   ["home", "/", "win"],
   ["about", "/about", "info"],
   ["journey", "/journey", "floppy"],
+  ["experience", "/experience", "bag"],
   ["projects", "/projects", "folder"],
   ["achievements", "/achievements", "star"],
   ["uses", "/uses", "disc"],

@@ -26,11 +26,11 @@ export default function JourneyPage() {
   const items: {
     key: string; kind: Kind; period: string; title: string; org: string; logo?: string; desc: string; points?: string[];
   }[] = [
-    { key: "smart", kind: "work", period: smart.period, title: smart.title[lang], org: smart.org, logo: smart.logo, desc: smart.desc[lang], points: smart.points.map((p) => p[lang]) },
+    { key: "smart", kind: "work", period: smart.period, title: smart.title[lang], org: smart.org, logo: smart.logo, desc: smart.desc[lang]},
     { key: "azure", kind: "cert", period: "Jul 2026", title: azure.title, org: azure.org, logo: binus.logo, desc: "" },
-    { key: "adira", kind: "work", period: adira.period, title: adira.title[lang], org: adira.org, logo: adira.logo, desc: adira.desc[lang], points: adira.points.map((p) => p[lang]) },
+    { key: "adira", kind: "work", period: adira.period, title: adira.title[lang], org: adira.org, logo: adira.logo, desc: adira.desc[lang]},
     { key: "findit", kind: "comp", period: "2024", title: findit.title, org: findit.org, desc: "" },
-    { key: "bncc", kind: "org", period: bncc.period, title: bncc.title[lang], org: bncc.org, logo: bncc.logo, desc: bncc.desc[lang], points: bncc.points.map((p) => p[lang]) },
+    { key: "bncc", kind: "org", period: bncc.period, title: bncc.title[lang], org: bncc.org, logo: bncc.logo, desc: bncc.desc[lang]},
     { key: "binus", kind: "study", period: binus.period, title: binus.major[lang], org: binus.school, logo: binus.logo, desc: binus.note[lang] },
   ];
 

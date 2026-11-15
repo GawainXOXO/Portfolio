@@ -60,6 +60,9 @@ export const SPRITES: Record<string, string[]> = {
   github: [
     "kk.....kk", "kkk...kkk", "kkkkkkkkk", "kkkkkkkkk", "kwkkkkkwk", "kkkkkkkkk", "kkkkwkkkk", ".kkkkkkk.", "..kkkkk..",
   ],
+  bag: [
+    "...kkkk...", "...k..k...", "kkkkkkkkkk", "kttttttttk", "kttttttttk", "kkkkyykkkk", "kttttttttk", "kttttttttk", "kkkkkkkkkk",
+  ],
   win: [
     "kkkkkkkkkkk", "kbbbbbbbbbk", "kwwwwwwwwwk", "kwrrwggwwwk", "kwrrwggwwwk", "kwwwwwwwwwk",
     "kwbbwyywwwk", "kwbbwyywwwk", "kwwwwwwwwwk", "kkkkkkkkkkk",
