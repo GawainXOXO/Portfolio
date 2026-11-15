@@ -1,5 +1,5 @@
 // ============================================================
-// Semua konten portofolio diatur dari file ini (sumber: CV Ryan).
+// All portfolio content lives in this file (source: Ryan's CV).
 // Nomor telepon sengaja TIDAK dipasang di situs publik.
 // ============================================================
 
@@ -95,9 +95,9 @@ export const PROJECTS: Project[] = [
   },
 ];
 
-export const EXPERIENCE: { period: string; title: L; org: string; logo: string; desc: L; points: L[] }[] = [
+export const EXPERIENCE: { period: L; title: L; org: string; logo: string; desc: L; points: L[] }[] = [
   {
-    period: "Sep 2026 — Sekarang",
+    period: { id: "Sep 2026 — Sekarang", en: "Sep 2026 — Present" },
     title: { id: "IT Digital Intern", en: "IT Digital Intern" },
     org: "Sinar Mas Agribusiness and Food",
     logo: "/logos/smart-icon.png",
@@ -114,7 +114,7 @@ export const EXPERIENCE: { period: string; title: L; org: string; logo: string; 
     ],
   },
   {
-    period: "Feb 2025 — Feb 2026",
+    period: { id: "Feb 2025 — Feb 2026", en: "Feb 2025 — Feb 2026" },
     title: { id: "DevOps Engineer Intern", en: "DevOps Engineer Intern" },
     org: "PT Adira Dinamika Multi Finance Tbk.",
     logo: "/logos/adira-icon.png",
@@ -131,7 +131,7 @@ export const EXPERIENCE: { period: string; title: L; org: string; logo: string; 
     ],
   },
   {
-    period: "Nov 2023 — Nov 2024",
+    period: { id: "Nov 2023 — Nov 2024", en: "Nov 2023 — Nov 2024" },
     title: { id: "Public Relation Staff", en: "Public Relation Staff" },
     org: "Bina Nusantara Computer Club",
     logo: "/logos/bncc-icon.png",
@@ -160,9 +160,9 @@ export const EDUCATION: { period: string; school: string; logo: string; major: L
   },
 ];
 
-export const ACHIEVEMENTS: { year: string; title: string; org: string; kind: "cert" | "award" | "competition"; link?: string }[] = [
-  { year: "2026", title: "Microsoft Azure AI Fundamentals", org: "Bina Nusantara University (BINUS)", kind: "cert" },
-  { year: "2024", title: "Semifinalis FindIT Hackathon", org: "DTETI FT UGM", kind: "competition" },
+export const ACHIEVEMENTS: { year: string; title: L; org: string; kind: "cert" | "award" | "competition"; link?: string }[] = [
+  { year: "2026", title: { id: "Microsoft Azure AI Fundamentals", en: "Microsoft Azure AI Fundamentals" }, org: "Bina Nusantara University (BINUS)", kind: "cert" },
+  { year: "2024", title: { id: "Semifinalis FindIT Hackathon", en: "FindIT Hackathon Semifinalist" }, org: "DTETI FT UGM", kind: "competition" },
 ];
 
 export const USES: { group: L; items: { name: string; desc: L }[] }[] = [

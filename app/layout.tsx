@@ -11,8 +11,8 @@ const term = VT323({ subsets: ["latin"], weight: "400", variable: "--font-term" 
 const script = Pinyon_Script({ subsets: ["latin"], weight: "400", variable: "--font-script" });
 
 export const metadata: Metadata = {
-  title: `${SITE.fullName} — Portofolio`,
-  description: "Portofolio Ryan Nathanael Budisetiawan: IT Digital Intern dan lulusan Computer Science (Software Engineering) — testing, UAT, CI/CD, dan machine learning.",
+  title: `${SITE.fullName} — Portfolio`,
+  description: "Portfolio of Ryan Nathanael Budisetiawan: IT Digital Intern and Computer Science graduate (Software Engineering) in testing, UAT, CI/CD, and machine learning.",
 };
 
 const themeScript = `try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}`;

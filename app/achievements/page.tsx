@@ -11,7 +11,7 @@ export default function AchievementsPage() {
   const [q, setQ] = useState("");
   const [kind, setKind] = useState<Kind>("all");
   const list = ACHIEVEMENTS.filter(
-    (a) => (kind === "all" || a.kind === kind) && (a.title + a.org).toLowerCase().includes(q.toLowerCase()),
+    (a) => (kind === "all" || a.kind === kind) && (a.title[lang] + a.org).toLowerCase().includes(q.toLowerCase()),
   );
   const kinds: Kind[] = ["all", "cert", "award", "competition"];
   return (
@@ -29,10 +29,10 @@ export default function AchievementsPage() {
       </div>
       <ul className="space-y-3">
         {list.map((a) => (
-          <li key={a.title} className="flex items-start gap-4 card-in p-4">
+          <li key={a.title.en} className="flex items-start gap-4 card-in p-4">
             <span className="font-mono text-xs text-muted">{a.year}</span>
             <div className="flex-1">
-              <h3 className="font-medium">{a.title}</h3>
+              <h3 className="font-medium">{a.title[lang]}</h3>
               <p className="text-sm text-muted">{a.org}</p>
             </div>
             <span className="chip px text-[0.55rem] uppercase text-accent">{UI.kinds[a.kind][lang]}</span>

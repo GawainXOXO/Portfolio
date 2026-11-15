@@ -10,7 +10,7 @@ export default function ExperiencePage() {
       <PageTitle lead={UI.expLead[lang]}>{UI.nav.experience[lang]}</PageTitle>
       <div className="space-y-8">
         {EXPERIENCE.map((e) => (
-          <article key={e.period + e.org} className="win">
+          <article key={e.period.en + e.org} className="win">
             <div className="titlebar"><span>{e.org.toLowerCase().replace(/[^a-z0-9 ]+/g, "").split(" ").slice(0, 2).join("_")}.exe</span><b>_ □ ×</b></div>
             <div className="p-4">
               <div className="flex items-center gap-3">
@@ -19,7 +19,7 @@ export default function ExperiencePage() {
                   <img src={e.logo} alt={`Logo ${e.org}`} className="max-h-full w-auto max-w-full object-contain" loading="lazy" />
                 </span>
                 <div className="min-w-0">
-                  <p className="text-xs text-muted">{e.period}</p>
+                  <p className="text-xs text-muted">{e.period[lang]}</p>
                   <h2 className="px text-xs leading-snug">{e.title[lang]}</h2>
                   <p className="px text-[0.6rem] uppercase text-accent">{e.org}</p>
                 </div>

@@ -30,12 +30,12 @@ function Controls() {
   const btn = "card-in px flex items-center justify-center px-2 py-1 text-[0.6rem] hover:bg-accent hover:text-white";
   return (
     <div className="flex gap-2">
-      <button className={btn} onClick={() => setLang(lang === "id" ? "en" : "id")} aria-label="Ganti bahasa">{lang === "id" ? "EN" : "ID"}</button>
+      <button className={btn} onClick={() => setLang(lang === "id" ? "en" : "id")} aria-label={lang === "id" ? "Ganti bahasa" : "Change language"}>{lang === "id" ? "EN" : "ID"}</button>
       <button
         onClick={toggle}
         role="switch"
         aria-checked={dark}
-        aria-label={dark ? "Mode malam aktif, ganti ke siang" : "Mode siang aktif, ganti ke malam"}
+        aria-label={lang === "id" ? (dark ? "Mode malam aktif, ganti ke siang" : "Mode siang aktif, ganti ke malam") : (dark ? "Night mode on, switch to day" : "Day mode on, switch to night")}
         className="switch"
       >
         <span className="ico l"><Pixel name="sun" size={2} /></span>
@@ -47,11 +47,12 @@ function Controls() {
 }
 
 function Avatar({ size }: { size: number }) {
+  const { lang } = useLang();
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
       src="/me.jpg"
-      alt={`Foto ${SITE.name}`}
+      alt={`${lang === "id" ? "Foto" : "Photo of"} ${SITE.name}`}
       width={size}
       height={size}
       className="shrink-0 border-2 border-line object-cover"
