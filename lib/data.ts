@@ -17,8 +17,8 @@ export type Lang = "id" | "en";
 type L = Record<Lang, string>;
 
 export const ROLE: L = {
-  id: "IT Digital Intern · Mahasiswa Computer Science",
-  en: "IT Digital Intern · Computer Science Student",
+  id: "IT Digital Intern · Lulusan Computer Science",
+  en: "IT Digital Intern · Computer Science Graduate",
 };
 
 export const TAGLINE: L = {
@@ -28,8 +28,8 @@ export const TAGLINE: L = {
 
 export const ABOUT: L[] = [
   {
-    id: "Aku mahasiswa Computer Science di Bina Nusantara University (spesialisasi Software Engineering) dengan pengalaman langsung di application testing, UAT, dan release support untuk sistem enterprise. Saat ini aku IT Digital Intern di Sinar Mas Agribusiness and Food, menjembatani tim bisnis dan developer pada platform ITSM lewat workflow testing, issue tracking, dokumentasi teknis, dan analisis data operasional.",
-    en: "I'm a Computer Science student at Bina Nusantara University (Software Engineering specialization) with hands-on experience in application testing, UAT, and release support across enterprise systems. I'm currently an IT Digital Intern at Sinar Mas Agribusiness and Food, bridging business teams and developers on an ITSM platform through workflow testing, issue tracking, technical documentation, and operational data analysis.",
+    id: "Aku lulusan Computer Science dari Bina Nusantara University (spesialisasi Software Engineering) dengan pengalaman langsung di application testing, UAT, dan release support untuk sistem enterprise. Saat ini aku IT Digital Intern di Sinar Mas Agribusiness and Food, menjembatani tim bisnis dan developer pada platform ITSM lewat workflow testing, issue tracking, dokumentasi teknis, dan analisis data operasional.",
+    en: "I'm a Computer Science graduate of Bina Nusantara University (Software Engineering specialization) with hands-on experience in application testing, UAT, and release support across enterprise systems. I'm currently an IT Digital Intern at Sinar Mas Agribusiness and Food, bridging business teams and developers on an ITSM platform through workflow testing, issue tracking, technical documentation, and operational data analysis.",
   },
   {
     id: "Sebelumnya aku mendukung banyak proyek UAT lewat otomasi CI/CD (Jenkins, Kubernetes, Git) di industri keuangan. Aku juga punya dasar kuat di Machine Learning dan computer vision lewat riset sistem pengenalan cerdas, termasuk skripsi tentang pengenalan Bahasa Isyarat Indonesia.",
@@ -39,7 +39,7 @@ export const ABOUT: L[] = [
 
 export const FACTS: { label: L; value: L }[] = [
   { label: { id: "Status", en: "Status" }, value: { id: "IT Digital Intern, terbuka untuk peluang kerja", en: "IT Digital Intern, open to job opportunities" } },
-  { label: { id: "Kuliah", en: "Education" }, value: { id: "Computer Science, Software Engineering — BINUS", en: "Computer Science, Software Engineering — BINUS" } },
+  { label: { id: "Pendidikan", en: "Education" }, value: { id: "Lulusan Computer Science (Software Engineering), BINUS", en: "Computer Science (Software Engineering) graduate, BINUS" } },
   { label: { id: "Fokus", en: "Focus" }, value: { id: "Testing & UAT, CI/CD, machine learning", en: "Testing & UAT, CI/CD, machine learning" } },
   { label: { id: "Lokasi", en: "Location" }, value: { id: "Indonesia", en: "Indonesia" } },
 ];

@@ -12,7 +12,7 @@ const script = Pinyon_Script({ subsets: ["latin"], weight: "400", variable: "--f
 
 export const metadata: Metadata = {
   title: `${SITE.fullName} — Portofolio`,
-  description: "Portofolio Ryan Nathanael Budisetiawan: IT Digital Intern dan mahasiswa Computer Science (Software Engineering) — testing, UAT, CI/CD, dan machine learning.",
+  description: "Portofolio Ryan Nathanael Budisetiawan: IT Digital Intern dan lulusan Computer Science (Software Engineering) — testing, UAT, CI/CD, dan machine learning.",
 };
 
 const themeScript = `try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}`;
