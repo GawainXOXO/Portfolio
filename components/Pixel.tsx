@@ -54,6 +54,12 @@ export const SPRITES: Record<string, string[]> = {
   moon: [
     "..yyyy...", ".yyyy....", "yyyy.....", "yyyy.....", "yyyy.....", "yyyy.....", ".yyyy..yy", "..yyyyyy.", "....yyy..",
   ],
+  linkedin: [
+    "bbbbbbbbbbb", "bbbbbbbbbbb", "bwbbbbbbbbb", "bbbbbbbbbbb", "bwbwbwwwbbb", "bwbwwbbwbbb", "bwbwbbbwbbb", "bwbwbbbwbbb", "bbbbbbbbbbb", "bbbbbbbbbbb",
+  ],
+  github: [
+    "kk.....kk", "kkk...kkk", "kkkkkkkkk", "kkkkkkkkk", "kwkkkkkwk", "kkkkkkkkk", "kkkkwkkkk", ".kkkkkkk.", "..kkkkk..",
+  ],
   win: [
     "kkkkkkkkkkk", "kbbbbbbbbbk", "kwwwwwwwwwk", "kwrrwggwwwk", "kwrrwggwwwk", "kwwwwwwwwwk",
     "kwbbwyywwwk", "kwbbwyywwwk", "kwwwwwwwwwk", "kkkkkkkkkkk",

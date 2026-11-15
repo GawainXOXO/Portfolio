@@ -18,7 +18,10 @@ export default function AboutPage() {
               <span className="absolute -left-[31px] top-1.5 h-3 w-3 border-2 border-line bg-accent" />
               <p className="font-mono text-xs text-muted">{e.period}</p>
               <h3 className="px text-xs">{e.title[lang]} · <span className="text-accent">{e.org}</span></h3>
-              <p className="mt-1 text-sm leading-relaxed text-muted">{e.desc[lang]}</p>
+              <p className="mt-1 leading-snug text-muted">{e.desc[lang]}</p>
+              <ul className="mt-2 list-[square] space-y-1 pl-5 text-sm leading-snug marker:text-accent">
+                {e.points.map((pt, i) => <li key={i}>{pt[lang]}</li>)}
+              </ul>
             </li>
           ))}
         </ol>

@@ -1,46 +1,48 @@
 // ============================================================
-// ISI DATA DI SINI — semua teks portofolio diatur dari file ini.
-// Setiap bagian bertanda "TODO" adalah placeholder yang harus diganti.
+// Semua konten portofolio diatur dari file ini (sumber: CV Ryan).
+// Nomor telepon sengaja TIDAK dipasang di situs publik.
 // ============================================================
 
 export const SITE = {
-  name: "Ryan Nathanael", // TODO: konfirmasi nama tampilan
+  name: "Ryan Nathanael",
+  fullName: "Ryan Nathanael Budisetiawan",
   handle: "ryan",
-  email: "ryan234nathanael@gmail.com", // TODO: ganti jika ingin email lain yang ditampilkan publik
+  email: "ryan234nathanael@gmail.com",
   github: "https://github.com/GawainXOXO",
-  linkedin: "https://linkedin.com/in/username-kamu", // TODO
-  location: "Indonesia", // TODO: kota
+  linkedin: "https://www.linkedin.com/in/ryan-budisetiawan/",
+  location: "Indonesia",
 };
 
 export type Lang = "id" | "en";
 type L = Record<Lang, string>;
 
 export const ROLE: L = {
-  id: "Software Developer", // TODO: mis. "Mahasiswa Informatika · Web Developer"
-  en: "Software Developer",
+  id: "IT Digital Intern · Mahasiswa Computer Science",
+  en: "IT Digital Intern · Computer Science Student",
 };
 
 export const TAGLINE: L = {
-  id: "Saya membangun produk web yang rapi, cepat, dan mudah dipakai. (TODO: ganti dengan kalimat perkenalan kamu)",
-  en: "I build clean, fast, easy-to-use web products. (TODO: replace with your own intro)",
+  id: "Menjembatani tim bisnis dan developer lewat testing, UAT, dan otomasi CI/CD, dengan fondasi kuat di software engineering dan machine learning.",
+  en: "Bridging business teams and developers through testing, UAT, and CI/CD automation, with a solid foundation in software engineering and machine learning.",
 };
 
 export const ABOUT: L[] = [
   {
-    id: "TODO: Ceritakan siapa kamu, apa yang kamu pelajari, dan apa yang membuatmu tertarik pada teknologi.",
-    en: "TODO: Tell who you are, what you are learning, and what draws you to technology.",
+    id: "Aku mahasiswa Computer Science di Bina Nusantara University (spesialisasi Software Engineering) dengan pengalaman langsung di application testing, UAT, dan release support untuk sistem enterprise. Saat ini aku IT Digital Intern di Sinar Mas Agribusiness and Food, menjembatani tim bisnis dan developer pada platform ITSM lewat workflow testing, issue tracking, dokumentasi teknis, dan analisis data operasional.",
+    en: "I'm a Computer Science student at Bina Nusantara University (Software Engineering specialization) with hands-on experience in application testing, UAT, and release support across enterprise systems. I'm currently an IT Digital Intern at Sinar Mas Agribusiness and Food, bridging business teams and developers on an ITSM platform through workflow testing, issue tracking, technical documentation, and operational data analysis.",
   },
   {
-    id: "TODO: Paragraf kedua — tujuan karier, hal yang sedang kamu eksplorasi, atau hobi di luar coding.",
-    en: "TODO: Second paragraph — career goals, what you are exploring, or hobbies outside coding.",
+    id: "Sebelumnya aku mendukung 100+ proyek UAT lewat otomasi CI/CD (Jenkins, Kubernetes, Git) di industri keuangan. Aku juga punya dasar kuat di Machine Learning dan computer vision lewat riset sistem pengenalan cerdas, termasuk skripsi tentang pengenalan Bahasa Isyarat Indonesia.",
+    en: "Previously I supported 100+ UAT projects through CI/CD automation (Jenkins, Kubernetes, Git) in financial services. I also have a strong foundation in Machine Learning and computer vision through research on intelligent recognition systems, including my thesis on Indonesian Sign Language recognition.",
   },
 ];
 
 export const SKILLS: { group: L; items: string[] }[] = [
-  { group: { id: "Bahasa", en: "Languages" }, items: ["TypeScript", "JavaScript", "Python"] }, // TODO
-  { group: { id: "Frontend", en: "Frontend" }, items: ["React", "Next.js", "Tailwind CSS"] }, // TODO
-  { group: { id: "Backend & Data", en: "Backend & Data" }, items: ["Node.js", "PostgreSQL", "REST API"] }, // TODO
-  { group: { id: "Alat", en: "Tools" }, items: ["Git", "GitHub", "Vercel"] }, // TODO
+  { group: { id: "Testing & QA", en: "Testing & QA" }, items: ["UAT", "Functional & UI/UX Testing", "Workflow Testing", "Test Case Design", "SDLC", "AI-Assisted Test Generation"] },
+  { group: { id: "DevOps & Infrastruktur", en: "DevOps & Infrastructure" }, items: ["Jenkins", "Kubernetes", "Git", "CI/CD"] },
+  { group: { id: "Data & Machine Learning", en: "Data & Machine Learning" }, items: ["SQL", "SSIS", "Python", "Excel", "Machine Learning"] },
+  { group: { id: "Software Development", en: "Software Development" }, items: ["Next.js", "React", "Laravel", "PHP", "JavaScript", "Java", "HTML & CSS", "Tailwind CSS", "Bootstrap"] },
+  { group: { id: "UI/UX", en: "UI/UX" }, items: ["Figma"] },
 ];
 
 export type Project = {
@@ -55,91 +57,125 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
-    slug: "proyek-satu",
-    title: "Proyek Satu", // TODO
+    slug: "robustness-sign-language",
+    title: "Robustness of Sign Language Recognition",
     summary: {
-      id: "TODO: Jelaskan masalah yang diselesaikan dan peran kamu.",
-      en: "TODO: Describe the problem solved and your role.",
+      id: "Skripsi: sistem pengenalan Bahasa Isyarat Indonesia berbasis LSTM dan computer vision untuk mendukung aksesibilitas, dengan membandingkan beberapa konfigurasi model AI untuk menemukan pendekatan yang andal di dunia nyata.",
+      en: "Undergraduate thesis: an LSTM-based Indonesian Sign Language recognition system using computer vision to support accessibility, comparing several AI model configurations to find approaches that hold up in real-world use.",
     },
-    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    stack: ["Python", "LSTM", "Computer Vision", "Machine Learning"],
     year: "2026",
-    demo: "#",
-    repo: "#",
   },
   {
-    slug: "proyek-dua",
-    title: "Proyek Dua", // TODO
+    slug: "bookexchange",
+    title: "BookExchange",
     summary: {
-      id: "TODO: Jelaskan fitur utama dan hasil/dampaknya.",
-      en: "TODO: Describe key features and the outcome/impact.",
+      id: "Aplikasi manajemen perpustakaan berbasis web: mahasiswa bisa meminjam buku, pustakawan mengelola inventaris dan memantau peminjaman. Fitur utama: CRUD dan autentikasi pengguna.",
+      en: "A web-based library management app where students borrow books and librarians manage inventory and monitor borrowing. Key features: CRUD and user authentication.",
     },
-    stack: ["React", "Node.js", "PostgreSQL"],
-    year: "2025",
-    repo: "#",
+    stack: ["Laravel", "PHP", "CRUD", "Authentication"],
+    year: "2024",
   },
   {
-    slug: "proyek-tiga",
-    title: "Proyek Tiga", // TODO
+    slug: "frontend-react",
+    title: "Front-End Website Projects",
     summary: {
-      id: "TODO: Proyek kuliah, hackathon, atau eksperimen pribadi.",
-      en: "TODO: A course project, hackathon, or personal experiment.",
+      id: "Beberapa proyek front-end dengan React yang berfokus pada antarmuka intuitif dan ramah pengguna, menerapkan prinsip UI/UX di seluruh proses desain.",
+      en: "Several front-end projects built with React, focused on intuitive, user-friendly interfaces and applying UI/UX principles throughout the design process.",
     },
-    stack: ["Python", "FastAPI"],
-    year: "2025",
-    repo: "#",
+    stack: ["React", "UI/UX", "Web Development"],
+    year: "2023",
   },
 ];
 
-export const EXPERIENCE: { period: string; title: L; org: string; desc: L }[] = [
+export const EXPERIENCE: { period: string; title: L; org: string; desc: L; points: L[] }[] = [
   {
-    period: "2025 — Sekarang", // TODO
-    title: { id: "Posisi / Peran", en: "Role / Position" },
-    org: "Nama Organisasi", // TODO
+    period: "Sep 2026 — Sekarang",
+    title: { id: "IT Digital Intern", en: "IT Digital Intern" },
+    org: "Sinar Mas Agribusiness and Food",
     desc: {
-      id: "TODO: Satu-dua kalimat tentang tanggung jawab dan pencapaian.",
-      en: "TODO: One or two sentences on responsibilities and achievements.",
+      id: "Menjembatani tim bisnis dan developer pada platform ITSM GAR.",
+      en: "Bridging business teams and developers on the GAR ITSM platform.",
     },
+    points: [
+      { id: "Business–IT liaison: mengumpulkan isu dan kebutuhan, melacak penyelesaian bug, dan mengelola umpan balik sampai tuntas.", en: "Business–IT liaison: gather issues and requirements, track bug resolution, and manage feedback through to closure." },
+      { id: "Application testing & UAT pada modul ITSM (Change Request, Incident, Release, Work Order, Contract), termasuk approval flow, search, export, email approval, plus regression testing.", en: "Application testing & UAT on ITSM modules (Change Request, Incident, Release, Work Order, Contract), including approval flows, search, export, email approval, with regression testing." },
+      { id: "Menemukan inkonsistensi workflow, celah access control, dan kelemahan validasi sebelum rilis, dengan acuan proses BMC Helix.", en: "Identify workflow inconsistencies, access-control gaps, and validation flaws before release, using the BMC Helix process as reference." },
+      { id: "Menulis dokumen UAT, test plan, test case, dan issue log; menganalisis data tiket operasional di Excel untuk laporan Ops & Support.", en: "Write UAT documents, test plans, test cases, and issue logs; analyze operational ticket data in Excel for Ops & Support reports." },
+      { id: "Memakai AI untuk prompt engineering, penyusunan dokumen, dan pembuatan test case.", en: "Use AI tools for prompt engineering, document drafting, and test case generation." },
+    ],
   },
   {
-    period: "2023 — 2025", // TODO
-    title: { id: "Pendidikan / Kegiatan", en: "Education / Activity" },
-    org: "Nama Institusi", // TODO
+    period: "Feb 2025 — Feb 2026",
+    title: { id: "DevOps Engineer Intern", en: "DevOps Engineer Intern" },
+    org: "PT Adira Dinamika Multi Finance Tbk.",
     desc: {
-      id: "TODO: Jurusan, organisasi, atau kegiatan relevan.",
-      en: "TODO: Major, organization, or relevant activity.",
+      id: "Mengotomasi deployment dan mendukung rilis di industri keuangan.",
+      en: "Automated deployments and supported releases in financial services.",
     },
+    points: [
+      { id: "Merancang dan memelihara pipeline CI/CD Jenkins terintegrasi Kubernetes untuk mengotomasi deployment web service.", en: "Designed and maintained Jenkins CI/CD pipelines integrated with Kubernetes to automate web service deployments." },
+      { id: "Mendukung 100+ proyek UAT dengan zero downtime selama pengujian.", en: "Supported 100+ UAT projects with zero downtime during testing." },
+      { id: "Mengoptimalkan alur deployment dan kesiapan UAT, berkontribusi pada KPI divisi dengan peningkatan performa hingga 4× dibanding baseline.", en: "Optimized deployment workflows and UAT readiness, contributing to division KPIs with up to 4× performance improvement over baseline." },
+      { id: "Membantu rilis produksi dengan tingkat keberhasilan tepat jadwal sekitar 75%.", en: "Assisted production releases with an approximately 75% on-schedule success rate." },
+      { id: "Ikut integrasi end-to-end sistem enterprise, serta menyiapkan dan memvalidasi data (nasabah, pengguna, pinjaman, pembayaran) untuk skenario UAT.", en: "Took part in end-to-end enterprise system integration, and prepared and validated data (customer, user, loan, payment) for UAT scenarios." },
+    ],
+  },
+  {
+    period: "Nov 2023 — Nov 2024",
+    title: { id: "Public Relation Staff", en: "Public Relation Staff" },
+    org: "Bina Nusantara Computer Club",
+    desc: {
+      id: "Mengelola media sosial BNCC dan kemitraan media.",
+      en: "Managed BNCC social media and media partnerships.",
+    },
+    points: [
+      { id: "Mengelola Instagram BNCC (6.000+ pengikut) dan membuat Reels dengan total 40.000+ penonton.", en: "Managed BNCC's Instagram (6,000+ followers) and produced Reels with 40,000+ total views." },
+      { id: "Menyusun standar pembuatan konten dan memastikan konten sesuai SOP.", en: "Created content standards and ensured posts followed the SOP." },
+      { id: "Berkontribusi pada 60+ kemitraan media dalam 2 kuartal.", en: "Contributed to 60+ media partnerships within 2 quarters." },
+    ],
   },
 ];
 
 export const EDUCATION: { period: string; school: string; major: L; note: L }[] = [
   {
-    period: "2023 — Sekarang", // TODO
-    school: "Nama Universitas", // TODO
-    major: { id: "Teknik Informatika", en: "Computer Science" }, // TODO
-    note: { id: "TODO: IPK, organisasi, atau mata kuliah favorit.", en: "TODO: GPA, organizations, or favorite courses." },
+    period: "2022 — 2026",
+    school: "Bina Nusantara University (BINUS)",
+    major: { id: "S1 Computer Science (Software Engineering)", en: "B.Sc. Computer Science (Software Engineering)" },
+    note: {
+      id: "IPK 3,39/4,00. Fokus pada Software Engineering, Machine Learning, dan Data Analytics. Skripsi: “Robustness of LSTM-Based Indonesian Sign Language Recognition System.”",
+      en: "GPA 3.39/4.00. Emphasis on Software Engineering, Machine Learning, and Data Analytics. Thesis: “Robustness of LSTM-Based Indonesian Sign Language Recognition System.”",
+    },
   },
 ];
 
 export const ACHIEVEMENTS: { year: string; title: string; org: string; kind: "cert" | "award" | "competition"; link?: string }[] = [
-  { year: "2025", title: "Nama Sertifikat / Penghargaan 1", org: "Penyelenggara", kind: "cert" }, // TODO
-  { year: "2025", title: "Nama Lomba / Hackathon", org: "Penyelenggara", kind: "competition" }, // TODO
-  { year: "2024", title: "Nama Penghargaan", org: "Penyelenggara", kind: "award" }, // TODO
+  { year: "2026", title: "Microsoft Azure AI Fundamentals", org: "Bina Nusantara University (BINUS)", kind: "cert" },
+  { year: "2024", title: "Semifinalis FindIT Hackathon", org: "DTETI FT UGM", kind: "competition" },
 ];
 
 export const USES: { group: L; items: { name: string; desc: L }[] }[] = [
   {
-    group: { id: "Perangkat", en: "Hardware" },
-    items: [{ name: "Laptop kamu", desc: { id: "TODO: spesifikasi singkat", en: "TODO: short specs" } }],
-  },
-  {
-    group: { id: "Editor & Alat", en: "Editor & Tools" },
+    group: { id: "DevOps", en: "DevOps" },
     items: [
-      { name: "VS Code", desc: { id: "TODO: tema & ekstensi favorit", en: "TODO: favorite theme & extensions" } },
-      { name: "Git & GitHub", desc: { id: "Kontrol versi dan kolaborasi", en: "Version control and collaboration" } },
+      { name: "Jenkins", desc: { id: "Pipeline CI/CD untuk deployment web service", en: "CI/CD pipelines for web service deployments" } },
+      { name: "Kubernetes", desc: { id: "Orkestrasi dan deployment container", en: "Container orchestration and deployment" } },
+      { name: "Git", desc: { id: "Version control, build tracking, dan validasi deployment", en: "Version control, build tracking, and deployment validation" } },
     ],
   },
   {
-    group: { id: "Layanan", en: "Services" },
-    items: [{ name: "Vercel", desc: { id: "Hosting dan deploy otomatis", en: "Hosting and automatic deploys" } }],
+    group: { id: "Data", en: "Data" },
+    items: [
+      { name: "SQL & SSIS", desc: { id: "Ekstraksi, persiapan, dan validasi data", en: "Data extraction, preparation, and validation" } },
+      { name: "Python & Excel", desc: { id: "Analisis data dan eksperimen machine learning", en: "Data analysis and machine learning experiments" } },
+    ],
+  },
+  {
+    group: { id: "Desain & Web", en: "Design & Web" },
+    items: [
+      { name: "Figma", desc: { id: "Desain UI/UX", en: "UI/UX design" } },
+      { name: "Next.js, React, Laravel", desc: { id: "Pengembangan aplikasi web", en: "Web application development" } },
+      { name: "Vercel", desc: { id: "Hosting dan deploy otomatis", en: "Hosting and automatic deploys" } },
+    ],
   },
 ];

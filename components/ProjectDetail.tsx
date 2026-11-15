@@ -12,9 +12,6 @@ export function ProjectDetail({ slug }: { slug: string }) {
       <Link href="/projects" className="px text-[0.65rem] text-muted hover:text-accent">← {UI.back[lang]}</Link>
       <h1 className="mt-4 px text-2xl">{p.title}</h1>
       <p className="mt-1 text-muted">{p.year}</p>
-      <div className="mt-6 aspect-video card-in border-dashed p-4 text-center text-muted flex items-center justify-center">
-        TODO: screenshot / video proyek
-      </div>
       <p className="mt-6 leading-relaxed text-muted">{p.summary[lang]}</p>
       <ul className="mt-5 flex flex-wrap gap-2">
         {p.stack.map((s) => <li key={s} className="chip">{s}</li>)}
