@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { LangProvider } from "@/lib/i18n";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
+import { Sidebar } from "@/components/Sidebar";
 import { SITE } from "@/lib/data";
 
 const head = Fraunces({ subsets: ["latin"], variable: "--font-head" });
@@ -23,9 +22,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head><script dangerouslySetInnerHTML={{ __html: themeScript }} /></head>
       <body className="antialiased">
         <LangProvider>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
+          <div className="mx-auto flex min-h-screen max-w-6xl flex-col lg:flex-row lg:gap-10 lg:px-8">
+            <Sidebar />
+            <main className="w-full max-w-3xl flex-1 px-5 py-10 lg:px-0">{children}</main>
+          </div>
         </LangProvider>
       </body>
     </html>

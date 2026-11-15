@@ -4,16 +4,30 @@ import type { Lang } from "./data";
 
 export const UI = {
   nav: {
+    home: { id: "Beranda", en: "Home" },
     about: { id: "Tentang", en: "About" },
-    skills: { id: "Skill", en: "Skills" },
     projects: { id: "Proyek", en: "Projects" },
-    experience: { id: "Pengalaman", en: "Experience" },
+    achievements: { id: "Prestasi", en: "Achievements" },
+    uses: { id: "Peralatan", en: "Uses" },
     contact: { id: "Kontak", en: "Contact" },
   },
   hello: { id: "Halo, saya", en: "Hi, I'm" },
-  seeProjects: { id: "Lihat proyek", en: "View projects" },
-  contactMe: { id: "Hubungi saya", en: "Get in touch" },
+  skills: { id: "Skill & Teknologi", en: "Skills & Tech" },
+  featured: { id: "Proyek pilihan", en: "Featured projects" },
   allProjects: { id: "Semua proyek", en: "All projects" },
+  back: { id: "Kembali", en: "Back" },
+  story: { id: "Cerita singkat", en: "Short story" },
+  career: { id: "Pengalaman", en: "Experience" },
+  education: { id: "Pendidikan", en: "Education" },
+  usesLead: { id: "Alat dan layanan yang aku pakai sehari-hari.", en: "Tools and services I use every day." },
+  achLead: { id: "Sertifikat, lomba, dan penghargaan.", en: "Certificates, competitions, and awards." },
+  search: { id: "Cari prestasi…", en: "Search achievements…" },
+  all: { id: "Semua", en: "All" },
+  kinds: {
+    cert: { id: "Sertifikat", en: "Certificate" },
+    award: { id: "Penghargaan", en: "Award" },
+    competition: { id: "Lomba", en: "Competition" },
+  },
   demo: { id: "Demo", en: "Live demo" },
   repo: { id: "Kode", en: "Source" },
   contactTitle: { id: "Mari ngobrol", en: "Let's talk" },
@@ -38,7 +52,10 @@ export function LangProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     try {
       const s = localStorage.getItem("lang");
-      if (s === "id" || s === "en") setLangState(s);
+      if (s === "id" || s === "en") {
+        setLangState(s);
+        document.documentElement.lang = s;
+      }
     } catch {}
   }, []);
   const setLang = (l: Lang) => {

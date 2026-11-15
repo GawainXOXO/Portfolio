@@ -13,7 +13,7 @@ export default function ContactPage() {
   };
   const input = "w-full rounded-lg border border-line bg-surface px-4 py-2.5 text-sm outline-none focus:border-accent";
   return (
-    <div className="mx-auto max-w-xl px-5 py-16">
+    <div className="max-w-xl">
       <h1 className="font-display text-4xl font-semibold">{UI.contactTitle[lang]}</h1>
       <p className="mt-3 text-muted">{UI.contactLead[lang]}</p>
       <form onSubmit={submit} className="mt-8 space-y-4">

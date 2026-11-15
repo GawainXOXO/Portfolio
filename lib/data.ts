@@ -110,3 +110,36 @@ export const EXPERIENCE: { period: string; title: L; org: string; desc: L }[] = 
     },
   },
 ];
+
+export const EDUCATION: { period: string; school: string; major: L; note: L }[] = [
+  {
+    period: "2023 — Sekarang", // TODO
+    school: "Nama Universitas", // TODO
+    major: { id: "Teknik Informatika", en: "Computer Science" }, // TODO
+    note: { id: "TODO: IPK, organisasi, atau mata kuliah favorit.", en: "TODO: GPA, organizations, or favorite courses." },
+  },
+];
+
+export const ACHIEVEMENTS: { year: string; title: string; org: string; kind: "cert" | "award" | "competition"; link?: string }[] = [
+  { year: "2025", title: "Nama Sertifikat / Penghargaan 1", org: "Penyelenggara", kind: "cert" }, // TODO
+  { year: "2025", title: "Nama Lomba / Hackathon", org: "Penyelenggara", kind: "competition" }, // TODO
+  { year: "2024", title: "Nama Penghargaan", org: "Penyelenggara", kind: "award" }, // TODO
+];
+
+export const USES: { group: L; items: { name: string; desc: L }[] }[] = [
+  {
+    group: { id: "Perangkat", en: "Hardware" },
+    items: [{ name: "Laptop kamu", desc: { id: "TODO: spesifikasi singkat", en: "TODO: short specs" } }],
+  },
+  {
+    group: { id: "Editor & Alat", en: "Editor & Tools" },
+    items: [
+      { name: "VS Code", desc: { id: "TODO: tema & ekstensi favorit", en: "TODO: favorite theme & extensions" } },
+      { name: "Git & GitHub", desc: { id: "Kontrol versi dan kolaborasi", en: "Version control and collaboration" } },
+    ],
+  },
+  {
+    group: { id: "Layanan", en: "Services" },
+    items: [{ name: "Vercel", desc: { id: "Hosting dan deploy otomatis", en: "Hosting and automatic deploys" } }],
+  },
+];
