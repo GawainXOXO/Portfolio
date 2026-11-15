@@ -25,7 +25,7 @@ export const UI = {
   back: { id: "Kembali", en: "Back" },
   journeyLead: { id: "Perjalananku di dunia teknologi, dari yang terbaru ke yang terlama.", en: "My path in tech, from newest to oldest." },
   facts: { id: "Fakta singkat", en: "Quick facts" },
-  kindsJ: { work: { id: "Kerja", en: "Work" }, study: { id: "Kuliah", en: "Study" }, org: { id: "Organisasi", en: "Organization" }, cert: { id: "Sertifikat", en: "Certificate" }, comp: { id: "Lomba", en: "Competition" } },
+  kindsJ: { work: { id: "Kerja", en: "Work" }, study: { id: "Kuliah", en: "Study" }, org: { id: "Organisasi", en: "Organization" } },
   expLead: { id: "Pengalaman kerja dan organisasi.", en: "Work and organization experience." },
   story: { id: "Cerita singkat", en: "Short story" },
   career: { id: "Pengalaman", en: "Experience" },

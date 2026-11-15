@@ -1,10 +1,10 @@
 "use client";
-import { ACHIEVEMENTS, EDUCATION, EXPERIENCE } from "@/lib/data";
+import { EDUCATION, EXPERIENCE } from "@/lib/data";
 import { UI, useLang } from "@/lib/i18n";
 import { PageTitle } from "@/components/Section";
 import { Pixel } from "@/components/Pixel";
 
-type Kind = "work" | "study" | "org" | "cert" | "comp";
+type Kind = "work" | "study" | "org";
 
 function Logo({ src, name }: { src: string; name: string }) {
   return (
@@ -19,18 +19,14 @@ export default function JourneyPage() {
   const { lang } = useLang();
   const [smart, adira, bncc] = EXPERIENCE;
   const binus = EDUCATION[0];
-  const azure = ACHIEVEMENTS.find((a) => a.kind === "cert")!;
-  const findit = ACHIEVEMENTS.find((a) => a.kind === "competition")!;
 
   // Urutan: terbaru → terlama
   const items: {
     key: string; kind: Kind; period: string; title: string; org: string; logo?: string; desc: string; points?: string[];
   }[] = [
-    { key: "smart", kind: "work", period: smart.period[lang], title: smart.title[lang], org: smart.org, logo: smart.logo, desc: smart.desc[lang]},
-    { key: "azure", kind: "cert", period: "Jul 2026", title: azure.title[lang], org: azure.org, logo: binus.logo, desc: "" },
-    { key: "adira", kind: "work", period: adira.period[lang], title: adira.title[lang], org: adira.org, logo: adira.logo, desc: adira.desc[lang]},
-    { key: "findit", kind: "comp", period: "2024", title: findit.title[lang], org: findit.org, desc: "" },
-    { key: "bncc", kind: "org", period: bncc.period[lang], title: bncc.title[lang], org: bncc.org, logo: bncc.logo, desc: bncc.desc[lang]},
+    { key: "smart", kind: "work", period: smart.period[lang], title: smart.title[lang], org: smart.org, logo: smart.logo, desc: smart.desc[lang] },
+    { key: "adira", kind: "work", period: adira.period[lang], title: adira.title[lang], org: adira.org, logo: adira.logo, desc: adira.desc[lang] },
+    { key: "bncc", kind: "org", period: bncc.period[lang], title: bncc.title[lang], org: bncc.org, logo: bncc.logo, desc: bncc.desc[lang] },
     { key: "binus", kind: "study", period: binus.period, title: binus.major[lang], org: binus.school, logo: binus.logo, desc: binus.note[lang] },
   ];
 
