@@ -47,19 +47,16 @@ function Controls() {
 }
 
 function Avatar({ size }: { size: number }) {
-  const initials = SITE.name.split(" ").map((w) => w[0]).slice(0, 2).join("");
   return (
-    <div
-      className="px flex shrink-0 items-center justify-center border-2 border-line text-white"
-      style={{
-        width: size, height: size, fontSize: size / 3.2, boxShadow: "3px 3px 0 var(--line)",
-        background: "conic-gradient(from 45deg, #ff2fb9, #19d3f5, #b5ff3b, #ffe14a, #ff2fb9)",
-        textShadow: "2px 2px 0 #1b1340",
-      }}
-      aria-hidden
-    >
-      {initials}
-    </div>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src="/me.jpg"
+      alt={`Foto ${SITE.name}`}
+      width={size}
+      height={size}
+      className="shrink-0 border-2 border-line object-cover"
+      style={{ width: size, height: size, boxShadow: "3px 3px 0 var(--accent)" }}
+    />
   );
 }
 
