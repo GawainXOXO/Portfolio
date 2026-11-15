@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { SITE, ROLE } from "@/lib/data";
 import { UI, useLang } from "@/lib/i18n";
 import { Pixel } from "./Pixel";
-import { VisitCounter } from "./Extras";
 
 const items = [
   ["home", "/", "win"],
@@ -95,7 +94,6 @@ export function Sidebar() {
         </div>
         <Menu />
         <div className="mt-auto flex flex-col gap-3">
-          <VisitCounter />
           <Controls />
           <p className="flex gap-3 text-sm text-muted">
             <a href={SITE.github} className="underline hover:text-accent">github</a>

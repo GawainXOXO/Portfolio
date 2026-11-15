@@ -37,31 +37,3 @@ export function Stickers() {
     </div>
   );
 }
-
-/** Counter kunjungan retro: menghitung kunjunganmu sendiri di browser ini (bukan total pengunjung). */
-export function VisitCounter() {
-  const { lang } = useLang();
-  const [n, setN] = useState<number | null>(null);
-  useEffect(() => {
-    let v = 1;
-    try {
-      v = (parseInt(localStorage.getItem("visits") || "0", 10) || 0) + 1;
-      if (!sessionStorage.getItem("counted")) {
-        localStorage.setItem("visits", String(v));
-        sessionStorage.setItem("counted", "1");
-      } else v -= 1;
-    } catch {}
-    setN(Math.max(v, 1));
-  }, []);
-  const digits = String(n ?? 0).padStart(6, "0");
-  return (
-    <div className="mt-3">
-      <p className="px mb-1 text-[0.5rem] uppercase text-muted">{lang === "id" ? "kunjunganmu ke-" : "your visit no."}</p>
-      <div className="flex gap-1">
-        {[...digits].map((d, i) => (
-          <span key={i} className="px border-2 border-line bg-black px-1.5 py-1 text-xs text-lime">{d}</span>
-        ))}
-      </div>
-    </div>
-  );
-}
