@@ -7,12 +7,10 @@ import { UI, useLang } from "@/lib/i18n";
 import { Pixel } from "./Pixel";
 
 const items = [
-  ["home", "/", "win"],
-  ["about", "/about", "info"],
-  ["journey", "/journey", "floppy"],
+  ["about", "/", "info"],
   ["experience", "/experience", "bag"],
   ["projects", "/projects", "folder"],
-  ["uses", "/uses", "disc"],
+  ["skills", "/skills", "disc"],
   ["contact", "/contact", "mail"],
 ] as const;
 
@@ -98,6 +96,10 @@ export function Sidebar() {
             <div>
               <p className="px text-sm leading-tight">{SITE.name}</p>
               <p className="mt-1 text-sm text-muted">{ROLE[lang]}<span className="blink">_</span></p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <a href="/Ryan_Nathanael_CV.pdf" target="_blank" rel="noopener noreferrer" className="card-in px px-2 py-1 text-[0.55rem] uppercase hover:bg-accent hover:text-white">{UI.cv.preview[lang]}</a>
+              <a href="/Ryan_Nathanael_CV.pdf" download="Ryan_Nathanael_CV.pdf" className="card-in px bg-accent px-2 py-1 text-[0.55rem] uppercase text-white hover:-translate-y-0.5">{UI.cv.download[lang]}</a>
             </div>
           </div>
         </div>

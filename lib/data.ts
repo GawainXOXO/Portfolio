@@ -21,11 +21,6 @@ export const ROLE: L = {
   en: "IT Digital Intern · Computer Science Graduate",
 };
 
-export const TAGLINE: L = {
-  id: "Menjembatani tim bisnis dan developer lewat testing, UAT, dan otomasi CI/CD, dengan fondasi kuat di software engineering dan machine learning.",
-  en: "Bridging business teams and developers through testing, UAT, and CI/CD automation, with a solid foundation in software engineering and machine learning.",
-};
-
 export const ABOUT: L[] = [
   {
     id: "Aku lulusan Computer Science dari Bina Nusantara University (spesialisasi Software Engineering) dengan pengalaman langsung di application testing, UAT, dan release support untuk sistem enterprise. Saat ini aku IT Digital Intern di Sinar Mas Agribusiness and Food, menjembatani tim bisnis dan developer pada platform ITSM lewat workflow testing, issue tracking, dokumentasi teknis, dan analisis data operasional.",
@@ -44,12 +39,23 @@ export const FACTS: { label: L; value: L }[] = [
   { label: { id: "Lokasi", en: "Location" }, value: { id: "Indonesia", en: "Indonesia" } },
 ];
 
-export const SKILLS: { group: L; items: string[] }[] = [
-  { group: { id: "Testing & QA", en: "Testing & QA" }, items: ["UAT", "Functional & UI/UX Testing", "Workflow Testing", "Test Case Design", "SDLC", "AI-Assisted Test Generation"] },
-  { group: { id: "DevOps & Infrastruktur", en: "DevOps & Infrastructure" }, items: ["Jenkins", "Kubernetes", "Git", "CI/CD"] },
-  { group: { id: "Data & Machine Learning", en: "Data & Machine Learning" }, items: ["SQL", "SSIS", "Python", "Excel", "Machine Learning"] },
-  { group: { id: "Software Development", en: "Software Development" }, items: ["Next.js", "React", "Laravel", "PHP", "JavaScript", "Java", "HTML & CSS", "Tailwind CSS", "Bootstrap"] },
-  { group: { id: "UI/UX", en: "UI/UX" }, items: ["Figma"] },
+type SkillItem = string | L;
+export const SKILLS: { group: L; items: SkillItem[] }[] = [
+  { group: { id: "Data & Analitik", en: "Data & Analytics" }, items: ["Python", "R", "Excel", "Looker Studio", "Tableau", "SQL", "SSIS"] },
+  { group: { id: "Pengembangan Software", en: "Software Development" }, items: ["React", "Next.js", "Laravel", "PHP", "JavaScript", "HTML", "CSS", "Tailwind CSS", "Bootstrap", "Java", "C"] },
+  { group: { id: "DevOps & Testing", en: "DevOps & Testing" }, items: ["Jenkins", "Kubernetes", "Git", "CI/CD", "Jira", "UAT & QA Testing"] },
+  { group: { id: "Desain & Produktivitas", en: "Design & Productivity" }, items: ["Figma", "PowerPoint", "Canva"] },
+  {
+    group: { id: "Soft Skill", en: "Soft Skills" },
+    items: [
+      { id: "Komunikasi", en: "Communication" },
+      { id: "Pemecahan Masalah", en: "Problem Solving" },
+      { id: "Kerja Sama Tim", en: "Teamwork" },
+      { id: "Manajemen Waktu", en: "Time Management" },
+      { id: "Adaptabilitas", en: "Adaptability" },
+      { id: "Kepemimpinan", en: "Leadership" },
+    ],
+  },
 ];
 
 export type Project = {
@@ -157,31 +163,5 @@ export const EDUCATION: { period: string; school: string; logo: string; major: L
       id: "IPK 3,39/4,00. Fokus pada Software Engineering, Machine Learning, dan Data Analytics. Skripsi: “Robustness of LSTM-Based Indonesian Sign Language Recognition System.”",
       en: "GPA 3.39/4.00. Emphasis on Software Engineering, Machine Learning, and Data Analytics. Thesis: “Robustness of LSTM-Based Indonesian Sign Language Recognition System.”",
     },
-  },
-];
-
-export const USES: { group: L; items: { name: string; desc: L }[] }[] = [
-  {
-    group: { id: "DevOps", en: "DevOps" },
-    items: [
-      { name: "Jenkins", desc: { id: "Pipeline CI/CD untuk deployment web service", en: "CI/CD pipelines for web service deployments" } },
-      { name: "Kubernetes", desc: { id: "Orkestrasi dan deployment container", en: "Container orchestration and deployment" } },
-      { name: "Git", desc: { id: "Version control, build tracking, dan validasi deployment", en: "Version control, build tracking, and deployment validation" } },
-    ],
-  },
-  {
-    group: { id: "Data", en: "Data" },
-    items: [
-      { name: "SQL & SSIS", desc: { id: "Ekstraksi, persiapan, dan validasi data", en: "Data extraction, preparation, and validation" } },
-      { name: "Python & Excel", desc: { id: "Analisis data dan eksperimen machine learning", en: "Data analysis and machine learning experiments" } },
-    ],
-  },
-  {
-    group: { id: "Desain & Web", en: "Design & Web" },
-    items: [
-      { name: "Figma", desc: { id: "Desain UI/UX", en: "UI/UX design" } },
-      { name: "Next.js, React, Laravel", desc: { id: "Pengembangan aplikasi web", en: "Web application development" } },
-      { name: "Vercel", desc: { id: "Hosting dan deploy otomatis", en: "Hosting and automatic deploys" } },
-    ],
   },
 ];

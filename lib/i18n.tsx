@@ -4,12 +4,10 @@ import type { Lang } from "./data";
 
 export const UI = {
   nav: {
-    home: { id: "Beranda", en: "Home" },
     about: { id: "Tentang", en: "About" },
-    journey: { id: "My Journey", en: "My Journey" },
     experience: { id: "Pengalaman", en: "Experience" },
     projects: { id: "Proyek", en: "Projects" },
-    uses: { id: "Peralatan", en: "Uses" },
+    skills: { id: "Skill", en: "Skills" },
     contact: { id: "Kontak", en: "Contact" },
   },
   ticker: {
@@ -22,14 +20,13 @@ export const UI = {
   featured: { id: "Proyek pilihan", en: "Featured projects" },
   allProjects: { id: "Semua proyek", en: "All projects" },
   back: { id: "Kembali", en: "Back" },
-  journeyLead: { id: "Perjalananku di dunia teknologi, dari yang terbaru ke yang terlama.", en: "My path in tech, from newest to oldest." },
   facts: { id: "Fakta singkat", en: "Quick facts" },
-  kindsJ: { work: { id: "Kerja", en: "Work" }, study: { id: "Kuliah", en: "Study" }, org: { id: "Organisasi", en: "Organization" } },
   expLead: { id: "Pengalaman kerja dan organisasi.", en: "Work and organization experience." },
   story: { id: "Cerita singkat", en: "Short story" },
   career: { id: "Pengalaman", en: "Experience" },
   education: { id: "Pendidikan", en: "Education" },
-  usesLead: { id: "Alat dan layanan yang aku pakai sehari-hari.", en: "Tools and services I use every day." },
+  skillsLead: { id: "Teknologi dan kemampuan yang kupakai.", en: "Technologies and abilities I work with." },
+  cv: { preview: { id: "Lihat CV", en: "Preview CV" }, download: { id: "Unduh CV", en: "Download CV" } },
   demo: { id: "Demo", en: "Live demo" },
   repo: { id: "Kode", en: "Source" },
   contactTitle: { id: "Mari ngobrol", en: "Let's talk" },
