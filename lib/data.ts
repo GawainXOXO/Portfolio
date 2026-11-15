@@ -160,11 +160,6 @@ export const EDUCATION: { period: string; school: string; logo: string; major: L
   },
 ];
 
-export const ACHIEVEMENTS: { year: string; title: L; org: string; kind: "cert" | "award" | "competition"; link?: string }[] = [
-  { year: "2026", title: { id: "Microsoft Azure AI Fundamentals", en: "Microsoft Azure AI Fundamentals" }, org: "Bina Nusantara University (BINUS)", kind: "cert" },
-  { year: "2024", title: { id: "Semifinalis FindIT Hackathon", en: "FindIT Hackathon Semifinalist" }, org: "DTETI FT UGM", kind: "competition" },
-];
-
 export const USES: { group: L; items: { name: string; desc: L }[] }[] = [
   {
     group: { id: "DevOps", en: "DevOps" },
