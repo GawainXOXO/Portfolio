@@ -111,3 +111,8 @@ a:hover > .tile { transform: translateY(-4px) scale(1.06); }
   .bob, .twinkle, .blink, .marquee, .rise { animation: none; }
   html { scroll-behavior: auto; }
 }
+
+.boot { position: fixed; inset: 0; z-index: 100; background: #05030c; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.boot-bar { width: 14rem; height: 18px; margin-top: 1.5rem; border: 2px solid #fff; padding: 2px; }
+.boot-bar i { display: block; height: 100%; width: 0; background: repeating-linear-gradient(90deg, var(--accent) 0 10px, transparent 10px 14px); animation: fill 1.6s steps(14) forwards; }
+@keyframes fill { to { width: 100%; } }

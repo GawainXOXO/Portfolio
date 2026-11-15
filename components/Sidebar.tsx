@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { SITE, ROLE } from "@/lib/data";
 import { UI, useLang } from "@/lib/i18n";
 import { Pixel } from "./Pixel";
+import { VisitCounter } from "./Extras";
 
 const items = [
   ["home", "/", "win"],
@@ -25,11 +26,11 @@ function Controls() {
     document.documentElement.classList.toggle("dark", d);
     try { localStorage.setItem("theme", d ? "dark" : "light"); } catch {}
   };
-  const btn = "card-in px px-2 py-1 text-[0.6rem] hover:bg-accent hover:text-white";
+  const btn = "card-in px flex items-center justify-center px-2 py-1 text-[0.6rem] hover:bg-accent hover:text-white";
   return (
     <div className="flex gap-2">
       <button className={btn} onClick={() => setLang(lang === "id" ? "en" : "id")} aria-label="Ganti bahasa">{lang === "id" ? "EN" : "ID"}</button>
-      <button className={btn} onClick={toggle} aria-label="Ganti tema">{dark ? "DAY" : "NIGHT"}</button>
+      <button className={btn} onClick={toggle} aria-label="Ganti tema" title={dark ? "Mode siang" : "Mode malam"}>{dark ? <Pixel name="sun" size={2} /> : <Pixel name="moon" size={2} />}</button>
     </div>
   );
 }
@@ -94,6 +95,7 @@ export function Sidebar() {
         </div>
         <Menu />
         <div className="mt-auto flex flex-col gap-3">
+          <VisitCounter />
           <Controls />
           <p className="flex gap-3 text-sm text-muted">
             <a href={SITE.github} className="underline hover:text-accent">github</a>
