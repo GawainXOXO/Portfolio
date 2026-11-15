@@ -88,11 +88,12 @@ export const PROJECTS: Project[] = [
   },
 ];
 
-export const EXPERIENCE: { period: string; title: L; org: string; desc: L; points: L[] }[] = [
+export const EXPERIENCE: { period: string; title: L; org: string; logo: string; desc: L; points: L[] }[] = [
   {
     period: "Sep 2026 — Sekarang",
     title: { id: "IT Digital Intern", en: "IT Digital Intern" },
     org: "Sinar Mas Agribusiness and Food",
+    logo: "/logos/smart.png",
     desc: {
       id: "Menjembatani tim bisnis dan developer pada platform ITSM GAR.",
       en: "Bridging business teams and developers on the GAR ITSM platform.",
@@ -109,6 +110,7 @@ export const EXPERIENCE: { period: string; title: L; org: string; desc: L; point
     period: "Feb 2025 — Feb 2026",
     title: { id: "DevOps Engineer Intern", en: "DevOps Engineer Intern" },
     org: "PT Adira Dinamika Multi Finance Tbk.",
+    logo: "/logos/adira.png",
     desc: {
       id: "Mengotomasi deployment dan mendukung rilis di industri keuangan.",
       en: "Automated deployments and supported releases in financial services.",
@@ -125,6 +127,7 @@ export const EXPERIENCE: { period: string; title: L; org: string; desc: L; point
     period: "Nov 2023 — Nov 2024",
     title: { id: "Public Relation Staff", en: "Public Relation Staff" },
     org: "Bina Nusantara Computer Club",
+    logo: "/logos/bncc.png",
     desc: {
       id: "Mengelola media sosial BNCC dan kemitraan media.",
       en: "Managed BNCC social media and media partnerships.",
@@ -137,10 +140,11 @@ export const EXPERIENCE: { period: string; title: L; org: string; desc: L; point
   },
 ];
 
-export const EDUCATION: { period: string; school: string; major: L; note: L }[] = [
+export const EDUCATION: { period: string; school: string; logo: string; major: L; note: L }[] = [
   {
     period: "2022 — 2026",
     school: "Bina Nusantara University (BINUS)",
+    logo: "/logos/binus.png",
     major: { id: "S1 Computer Science (Software Engineering)", en: "B.Sc. Computer Science (Software Engineering)" },
     note: {
       id: "IPK 3,39/4,00. Fokus pada Software Engineering, Machine Learning, dan Data Analytics. Skripsi: “Robustness of LSTM-Based Indonesian Sign Language Recognition System.”",
