@@ -22,7 +22,7 @@ export default function AboutPage() {
   const [first, ...rest] = SITE.name.split(" ");
   return (
     <>
-      <section className="win mb-10">
+      <section className="win mb-10 overflow-hidden">
         <div className="titlebar"><span>{UI.nav.about[lang].toLowerCase()}.txt</span><b>_ □ ×</b></div>
         <div className="relative p-6">
           <span className="bob absolute right-5 top-4"><Pixel name="star" size={3} /></span>
@@ -33,6 +33,11 @@ export default function AboutPage() {
             <Word text={rest.join(" ") || SITE.handle} offset={2} />
           </h1>
           <p className="px mt-4 text-[0.65rem] uppercase">{ROLE[lang]}<span className="blink">_</span></p>
+        </div>
+        <div className="overflow-hidden border-t-2 border-line bg-sun py-1 text-black">
+          <div className="marquee px text-[0.6rem] uppercase">
+            {[0, 1].map((k) => <span key={k} className="whitespace-nowrap px-6">{UI.ticker[lang]}</span>)}
+          </div>
         </div>
       </section>
 
