@@ -11,6 +11,10 @@ export const UI = {
     uses: { id: "Peralatan", en: "Uses" },
     contact: { id: "Kontak", en: "Contact" },
   },
+  ticker: {
+    id: "★ terbuka untuk magang & kolaborasi ★ klik menu di kiri untuk menjelajah ★ dibuat dengan Next.js ★",
+    en: "★ open to internships & collaboration ★ use the menu on the left to explore ★ built with Next.js ★",
+  },
   hello: { id: "Halo, saya", en: "Hi, I'm" },
   skills: { id: "Skill & Teknologi", en: "Skills & Tech" },
   featured: { id: "Proyek pilihan", en: "Featured projects" },

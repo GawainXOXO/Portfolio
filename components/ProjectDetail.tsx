@@ -9,17 +9,17 @@ export function ProjectDetail({ slug }: { slug: string }) {
   if (!p) return null;
   return (
     <article>
-      <Link href="/projects" className="font-mono text-sm text-muted hover:text-accent">← {UI.back[lang]}</Link>
-      <h1 className="mt-4 font-display text-4xl font-semibold">{p.title}</h1>
-      <p className="mt-1 font-mono text-sm text-muted">{p.year}</p>
-      <div className="mt-6 aspect-video rounded-xl border border-dashed border-line bg-surface p-4 text-center font-mono text-xs text-muted flex items-center justify-center">
+      <Link href="/projects" className="px text-[0.65rem] text-muted hover:text-accent">← {UI.back[lang]}</Link>
+      <h1 className="mt-4 px text-2xl">{p.title}</h1>
+      <p className="mt-1 text-muted">{p.year}</p>
+      <div className="mt-6 aspect-video card-in border-dashed p-4 text-center text-muted flex items-center justify-center">
         TODO: screenshot / video proyek
       </div>
       <p className="mt-6 leading-relaxed text-muted">{p.summary[lang]}</p>
       <ul className="mt-5 flex flex-wrap gap-2">
-        {p.stack.map((s) => <li key={s} className="rounded-full border border-line px-3 py-1 font-mono text-xs">{s}</li>)}
+        {p.stack.map((s) => <li key={s} className="chip">{s}</li>)}
       </ul>
-      <div className="mt-6 flex gap-5 font-mono text-sm">
+      <div className="mt-6 flex gap-5 px text-[0.65rem] uppercase">
         {p.demo && <a href={p.demo} className="text-accent hover:underline">{UI.demo[lang]} ↗</a>}
         {p.repo && <a href={p.repo} className="text-accent hover:underline">{UI.repo[lang]} ↗</a>}
       </div>

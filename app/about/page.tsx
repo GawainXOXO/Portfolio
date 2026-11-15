@@ -15,9 +15,9 @@ export default function AboutPage() {
         <ol className="space-y-6 border-l border-line pl-6">
           {EXPERIENCE.map((e) => (
             <li key={e.period + e.org} className="relative">
-              <span className="absolute -left-[31px] top-1.5 h-2.5 w-2.5 rounded-full bg-accent" />
+              <span className="absolute -left-[31px] top-1.5 h-3 w-3 border-2 border-line bg-accent" />
               <p className="font-mono text-xs text-muted">{e.period}</p>
-              <h3 className="font-display text-lg font-semibold">{e.title[lang]} · <span className="text-accent">{e.org}</span></h3>
+              <h3 className="px text-xs">{e.title[lang]} · <span className="text-accent">{e.org}</span></h3>
               <p className="mt-1 text-sm leading-relaxed text-muted">{e.desc[lang]}</p>
             </li>
           ))}
@@ -26,9 +26,9 @@ export default function AboutPage() {
       <Block title={UI.education[lang]}>
         <div className="space-y-3">
           {EDUCATION.map((e) => (
-            <div key={e.school} className="rounded-xl border border-line bg-surface p-4">
+            <div key={e.school} className="card-in p-4">
               <p className="font-mono text-xs text-muted">{e.period}</p>
-              <h3 className="font-display text-lg font-semibold">{e.school}</h3>
+              <h3 className="px text-xs">{e.school}</h3>
               <p className="text-sm">{e.major[lang]}</p>
               <p className="mt-1 text-sm text-muted">{e.note[lang]}</p>
             </div>

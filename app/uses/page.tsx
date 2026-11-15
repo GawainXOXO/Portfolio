@@ -12,7 +12,7 @@ export default function UsesPage() {
         <Block key={g.group.en} title={g.group[lang]}>
           <ul className="space-y-3">
             {g.items.map((i) => (
-              <li key={i.name} className="rounded-xl border border-line bg-surface p-4">
+              <li key={i.name} className="card-in p-4">
                 <h3 className="font-medium">{i.name}</h3>
                 <p className="text-sm text-muted">{i.desc[lang]}</p>
               </li>

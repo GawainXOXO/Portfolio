@@ -4,14 +4,15 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { SITE, ROLE } from "@/lib/data";
 import { UI, useLang } from "@/lib/i18n";
+import { Pixel } from "./Pixel";
 
 const items = [
-  ["home", "/", "⌂"],
-  ["about", "/about", "☺"],
-  ["projects", "/projects", "▣"],
-  ["achievements", "/achievements", "★"],
-  ["uses", "/uses", "⚙"],
-  ["contact", "/contact", "✉"],
+  ["home", "/", "win"],
+  ["about", "/about", "info"],
+  ["projects", "/projects", "folder"],
+  ["achievements", "/achievements", "star"],
+  ["uses", "/uses", "disc"],
+  ["contact", "/contact", "mail"],
 ] as const;
 
 function Controls() {
@@ -24,11 +25,11 @@ function Controls() {
     document.documentElement.classList.toggle("dark", d);
     try { localStorage.setItem("theme", d ? "dark" : "light"); } catch {}
   };
-  const btn = "rounded-md border border-line px-2.5 py-1 font-mono text-xs hover:border-accent";
+  const btn = "card-in px px-2 py-1 text-[0.6rem] hover:bg-accent hover:text-white";
   return (
     <div className="flex gap-2">
       <button className={btn} onClick={() => setLang(lang === "id" ? "en" : "id")} aria-label="Ganti bahasa">{lang === "id" ? "EN" : "ID"}</button>
-      <button className={btn} onClick={toggle} aria-label="Ganti tema">{dark ? "☀" : "☾"}</button>
+      <button className={btn} onClick={toggle} aria-label="Ganti tema">{dark ? "DAY" : "NIGHT"}</button>
     </div>
   );
 }
@@ -37,8 +38,12 @@ function Avatar({ size }: { size: number }) {
   const initials = SITE.name.split(" ").map((w) => w[0]).slice(0, 2).join("");
   return (
     <div
-      className="flex shrink-0 items-center justify-center rounded-2xl bg-accent font-display font-semibold text-bg"
-      style={{ width: size, height: size, fontSize: size / 2.4 }}
+      className="px flex shrink-0 items-center justify-center border-2 border-line text-white"
+      style={{
+        width: size, height: size, fontSize: size / 3.2, boxShadow: "3px 3px 0 var(--line)",
+        background: "conic-gradient(from 45deg, #ff2fb9, #19d3f5, #b5ff3b, #ffe14a, #ff2fb9)",
+        textShadow: "2px 2px 0 #1b1340",
+      }}
       aria-hidden
     >
       {initials}
@@ -50,19 +55,19 @@ function Menu({ onPick }: { onPick?: () => void }) {
   const path = usePathname();
   const { lang } = useLang();
   return (
-    <nav className="flex flex-col gap-1">
-      {items.map(([k, href, icon]) => {
+    <nav className="flex flex-col gap-2">
+      {items.map(([k, href, sprite]) => {
         const active = href === "/" ? path === "/" : path.startsWith(href);
         return (
           <Link
             key={k}
             href={href}
             onClick={onPick}
-            className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm transition ${
-              active ? "bg-ink text-bg" : "text-muted hover:bg-surface hover:text-ink"
+            className={`px flex items-center gap-3 border-2 border-line px-3 py-2 text-[0.65rem] uppercase transition-transform ${
+              active ? "bg-accent text-white shadow-[3px_3px_0_var(--line)]" : "bg-surface hover:-translate-y-0.5 hover:shadow-[3px_3px_0_var(--line)]"
             }`}
           >
-            <span className="w-4 text-center">{icon}</span>
+            <Pixel name={sprite} size={2} />
             {UI.nav[k][lang]}
           </Link>
         );
@@ -76,43 +81,42 @@ export function Sidebar() {
   const [open, setOpen] = useState(false);
   return (
     <>
-      {/* Desktop */}
-      <aside className="hidden lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-64 lg:shrink-0 lg:flex-col lg:gap-6 lg:py-10">
-        <div className="flex flex-col gap-4">
-          <Avatar size={88} />
-          <div>
-            <p className="font-display text-xl font-semibold leading-tight">{SITE.name}</p>
-            <p className="mt-1 font-mono text-xs text-muted">{ROLE[lang]}</p>
+      <aside className="hidden lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-64 lg:shrink-0 lg:flex-col lg:gap-5 lg:py-8">
+        <div className="win">
+          <div className="titlebar"><span>me.exe</span><b>_ □ ×</b></div>
+          <div className="flex flex-col gap-3 p-4">
+            <Avatar size={84} />
+            <div>
+              <p className="px text-sm leading-tight">{SITE.name}</p>
+              <p className="mt-1 text-sm text-muted">{ROLE[lang]}<span className="blink">_</span></p>
+            </div>
           </div>
         </div>
-        <div className="h-px bg-line" />
         <Menu />
-        <div className="h-px bg-line" />
-        <div className="mt-auto flex flex-col gap-4">
+        <div className="mt-auto flex flex-col gap-3">
           <Controls />
-          <p className="flex gap-4 font-mono text-xs text-muted">
-            <a href={SITE.github} className="hover:text-accent">GitHub</a>
-            <a href={SITE.linkedin} className="hover:text-accent">LinkedIn</a>
-            <a href={`mailto:${SITE.email}`} className="hover:text-accent">Email</a>
+          <p className="flex gap-3 text-sm text-muted">
+            <a href={SITE.github} className="underline hover:text-accent">github</a>
+            <a href={SITE.linkedin} className="underline hover:text-accent">linkedin</a>
+            <a href={`mailto:${SITE.email}`} className="underline hover:text-accent">email</a>
           </p>
         </div>
       </aside>
 
-      {/* Mobile */}
-      <header className="sticky top-0 z-40 border-b border-line bg-bg/90 backdrop-blur lg:hidden">
-        <div className="flex items-center justify-between px-5 py-3">
+      <header className="sticky top-0 z-40 border-b-2 border-line bg-bg lg:hidden">
+        <div className="flex items-center justify-between px-4 py-2">
           <div className="flex items-center gap-3">
-            <Avatar size={36} />
-            <span className="font-display font-semibold">{SITE.name}</span>
+            <Avatar size={34} />
+            <span className="px text-[0.65rem]">{SITE.name}</span>
           </div>
           <div className="flex items-center gap-2">
             <Controls />
-            <button onClick={() => setOpen(!open)} className="rounded-md border border-line px-2.5 py-1 text-sm" aria-label="Menu" aria-expanded={open}>
-              {open ? "✕" : "☰"}
+            <button onClick={() => setOpen(!open)} className="card-in px px-2 py-1 text-[0.6rem]" aria-label="Menu" aria-expanded={open}>
+              {open ? "X" : "MENU"}
             </button>
           </div>
         </div>
-        {open && <div className="border-t border-line px-3 py-3"><Menu onPick={() => setOpen(false)} /></div>}
+        {open && <div className="border-t-2 border-line p-3"><Menu onPick={() => setOpen(false)} /></div>}
       </header>
     </>
   );
