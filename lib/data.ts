@@ -101,8 +101,8 @@ export const PROJECTS: Project[] = [
       en: "I mapped both data sources and their SLA definitions before building any visual. My focus was on the metrics Ops & Support actually use, not just more charts: ticket status, response time, resolution time, and backlog age.",
     },
     role: {
-      id: "IT Digital Intern (analisis data dan pembuatan dashboard)",
-      en: "IT Digital Intern (data analysis and dashboard development)",
+      id: "IT Digital Intern",
+      en: "IT Digital Intern",
     },
     workflow: [
       { id: "Mengumpulkan dan merapikan data tiket Incident dan Work Order dari dua sumber.", en: "Collected and cleaned Incident and Work Order ticket data from two sources." },
