@@ -1,5 +1,5 @@
 "use client";
-import { EXPERIENCE } from "@/lib/data";
+import { CERTIFICATIONS, EXPERIENCE, HONORS } from "@/lib/data";
 import { UI, useLang } from "@/lib/i18n";
 import { PageTitle } from "@/components/Section";
 
@@ -32,6 +32,24 @@ export default function ExperiencePage() {
           </article>
         ))}
       </div>
+      <section className="mt-10 grid gap-6 sm:grid-cols-2">
+        <div>
+          <h2 className="px text-sm text-accent">{lang === "id" ? "Sertifikasi" : "Certifications"}</h2>
+          <ul className="mt-3 space-y-2">
+            {CERTIFICATIONS.map((c) => (
+              <li key={c.title} className="card p-3"><p className="font-bold">{c.title}</p><p className="text-sm text-muted">{c.org} · {c.period}</p></li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h2 className="px text-sm text-accent">{lang === "id" ? "Penghargaan" : "Honors & Awards"}</h2>
+          <ul className="mt-3 space-y-2">
+            {HONORS.map((h) => (
+              <li key={h.title} className="card p-3"><p className="font-bold">{h.title}</p><p className="text-sm text-muted">{h.year}</p></li>
+            ))}
+          </ul>
+        </div>
+      </section>
     </>
   );
 }

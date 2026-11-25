@@ -5,7 +5,7 @@ import {
 } from "react-icons/si";
 import {
   FaJava, FaFileExcel, FaChartBar, FaDatabase, FaSyncAlt, FaClipboardCheck, FaFilePowerpoint,
-  FaComments, FaBrain, FaUsers, FaClock, FaFlag,
+  FaChartPie, FaComments, FaBrain, FaUsers, FaClock, FaFlag,
 } from "react-icons/fa";
 
 // react-icons tidak punya logo Canva, jadi digambar manual: lingkaran gradasi teal-ungu dengan huruf "c" putih.
@@ -33,6 +33,7 @@ const MAP: Record<string, [IconType, string]> = {
   Excel: [FaFileExcel, "#217346"],
   "Looker Studio": [SiLooker, "#4285F4"],
   Tableau: [FaChartBar, "#E97627"],
+  "Power BI": [FaChartPie, "#F2C811"],
   SQL: [SiPostgresql, "#4169E1"],
   SSIS: [FaDatabase, "#CC2927"],
   React: [SiReact, "#149ECA"],

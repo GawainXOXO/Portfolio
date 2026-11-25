@@ -27,8 +27,8 @@ export const ABOUT: L[] = [
     en: "I'm a Computer Science graduate of Bina Nusantara University (Software Engineering specialization) with hands-on experience in application testing, UAT, and release support across enterprise systems. I'm currently an IT Digital Intern at Sinar Mas Agribusiness and Food, bridging business teams and developers on an ITSM platform through workflow testing, issue tracking, technical documentation, and operational data analysis.",
   },
   {
-    id: "Sebelumnya aku mendukung banyak proyek UAT lewat otomasi CI/CD (Jenkins, Kubernetes, Git) di industri keuangan. Aku juga punya dasar kuat di Machine Learning dan computer vision lewat riset sistem pengenalan cerdas, termasuk skripsi tentang pengenalan Bahasa Isyarat Indonesia.",
-    en: "Previously I supported many UAT projects through CI/CD automation (Jenkins, Kubernetes, Git) in financial services. I also have a strong foundation in Machine Learning and computer vision through research on intelligent recognition systems, including my thesis on Indonesian Sign Language recognition.",
+    id: "Sebelumnya aku mendukung 100+ proyek UAT lewat otomasi CI/CD (Jenkins, Kubernetes, Git) di industri keuangan. Aku juga punya dasar kuat di Machine Learning dan computer vision lewat riset sistem pengenalan cerdas, termasuk skripsi tentang pengenalan Bahasa Isyarat Indonesia.",
+    en: "Previously I supported 100+ UAT projects through CI/CD automation (Jenkins, Kubernetes, Git) in financial services. I also have a strong foundation in Machine Learning and computer vision through research on intelligent recognition systems, including my thesis on Indonesian Sign Language recognition.",
   },
 ];
 
@@ -41,7 +41,7 @@ export const FACTS: { label: L; value: L }[] = [
 
 type SkillItem = string | L;
 export const SKILLS: { group: L; items: SkillItem[] }[] = [
-  { group: { id: "Data & Analitik", en: "Data & Analytics" }, items: ["Python", "R", "Excel", "Looker Studio", "Tableau", "SQL", "SSIS"] },
+  { group: { id: "Data & Analitik", en: "Data & Analytics" }, items: ["Python", "R", "Excel", "Looker Studio", "Tableau", "Power BI", "SQL", "SSIS"] },
   { group: { id: "Pengembangan Software", en: "Software Development" }, items: ["React", "Next.js", "Laravel", "PHP", "JavaScript", "HTML", "CSS", "Tailwind CSS", "Bootstrap", "Java", "C"] },
   { group: { id: "DevOps & Testing", en: "DevOps & Testing" }, items: ["Jenkins", "Kubernetes", "Git", "CI/CD", "Jira", "UAT & QA Testing"] },
   { group: { id: "Desain & Produktivitas", en: "Design & Productivity" }, items: ["Figma", "PowerPoint", "Canva"] },
@@ -159,11 +159,11 @@ export const EXPERIENCE: { period: L; title: L; org: string; logo: string; desc:
       en: "Bridging business teams and developers on the GAR ITSM platform.",
     },
     points: [
-      { id: "Business–IT liaison: mengumpulkan isu dan kebutuhan, melacak penyelesaian bug, dan mengelola umpan balik sampai tuntas.", en: "Business–IT liaison: gather issues and requirements, track bug resolution, and manage feedback through to closure." },
-      { id: "Application testing & UAT pada modul ITSM (Change Request, Incident, Release, Work Order, Contract), termasuk approval flow, search, export, email approval, plus regression testing.", en: "Application testing & UAT on ITSM modules (Change Request, Incident, Release, Work Order, Contract), including approval flows, search, export, email approval, with regression testing." },
-      { id: "Menemukan inkonsistensi workflow, celah access control, dan kelemahan validasi sebelum rilis, dengan acuan proses BMC Helix.", en: "Identify workflow inconsistencies, access-control gaps, and validation flaws before release, using the BMC Helix process as reference." },
-      { id: "Menulis dokumen UAT, test plan, test case, dan issue log; menganalisis data tiket operasional di Excel untuk laporan Ops & Support.", en: "Write UAT documents, test plans, test cases, and issue logs; analyze operational ticket data in Excel for Ops & Support reports." },
-      { id: "Memakai AI untuk prompt engineering, penyusunan dokumen, dan pembuatan test case.", en: "Use AI tools for prompt engineering, document drafting, and test case generation." },
+      { id: "Business–IT Liaison: menjembatani tim bisnis dan developer pada platform ITSM GAR, mengumpulkan isu dan kebutuhan, melacak penyelesaian bug, dan mengelola umpan balik sampai tuntas.", en: "Business–IT Liaison: bridge business teams and developers on the GAR ITSM platform: gather issues and requirements, track bug resolution, and manage feedback through to closure." },
+      { id: "Application Testing & UAT: pengujian fungsional, UI/UX, dan workflow pada modul ITSM berbasis web (Change Request, Incident, Release, Work Order, Contract), termasuk approval flow, search, export, dan email approval, plus regression testing atas perbaikan.", en: "Application Testing & UAT: run functional, UI/UX, and workflow testing on web-based ITSM modules (Change Request, Incident, Release, Work Order, Contract), including approval flows, search, export, and email approval, with regression testing of fixes." },
+      { id: "Logic & Security Checks: menemukan inkonsistensi workflow, celah access control, dan kelemahan validasi sebelum rilis, divalidasi dengan proses BMC Helix sebagai acuan.", en: "Logic & Security Checks: identify workflow inconsistencies, access-control gaps, and validation flaws before release, validated against the BMC Helix process as reference." },
+      { id: "Documentation & Reporting: menulis dokumen UAT, test plan, test case, dan issue log; menganalisis data tiket operasional di Excel dan menyiapkan laporan untuk Ops & Support. Membuat IT-Helpdesk Dashboard di Power BI untuk memantau tiket, SLA, dan backlog.", en: "Documentation & Reporting: write UAT documents, test plans, test cases, and issue logs; analyze operational ticket data in Excel and prepare reports for Ops & Support. Built the IT-Helpdesk Dashboard in Power BI to monitor tickets, SLA, and backlog." },
+      { id: "AI-Assisted Workflow: memakai AI untuk prompt engineering, penyusunan dokumen, dan pembuatan test case demi mempercepat alur kerja tim.", en: "AI-Assisted Workflow: use AI tools for prompt engineering, document drafting, and test case generation to speed up team workflows." },
     ],
   },
   {
@@ -176,11 +176,13 @@ export const EXPERIENCE: { period: L; title: L; org: string; logo: string; desc:
       en: "Automated deployments and supported releases in financial services.",
     },
     points: [
-      { id: "Merancang dan memelihara pipeline CI/CD Jenkins terintegrasi Kubernetes untuk mengotomasi deployment web service.", en: "Designed and maintained Jenkins CI/CD pipelines integrated with Kubernetes to automate web service deployments." },
-      { id: "Mendukung banyak proyek UAT dan memastikan kesiapan fitur serta eksekusi deployment berjalan mulus.", en: "Supported many UAT projects, ensuring feature readiness and smooth deployment execution." },
-      { id: "Mengoptimalkan alur deployment dan kesiapan UAT, berkontribusi pada pencapaian KPI divisi lewat peningkatan performa yang signifikan.", en: "Optimized deployment workflows and UAT readiness, contributing to division KPI achievement through significant performance improvements." },
-      { id: "Membantu rilis produksi dengan deployment yang tepat jadwal.", en: "Assisted production releases with on-schedule deployments." },
-      { id: "Ikut integrasi end-to-end sistem enterprise, serta menyiapkan dan memvalidasi data (nasabah, pengguna, pinjaman, pembayaran) untuk skenario UAT.", en: "Took part in end-to-end enterprise system integration, and prepared and validated data (customer, user, loan, payment) for UAT scenarios." },
+      { id: "CI/CD Pipeline Development: merancang dan memelihara pipeline CI/CD Jenkins terintegrasi Kubernetes untuk mengotomasi deployment web service, meningkatkan efisiensi dan keandalan deployment.", en: "CI/CD Pipeline Development: designed and maintained Jenkins CI/CD pipelines integrated with Kubernetes to automate web service deployments, improving deployment efficiency and reliability." },
+      { id: "UAT & Release Management: mendukung 50+ proyek UAT, memastikan deployment berjalan mulus dan fitur siap, dengan zero downtime selama pengujian.", en: "UAT & Release Management: supported 50+ UAT projects, ensuring seamless deployment execution and feature readiness with zero downtime during testing activities." },
+      { id: "Deployment Optimization: meningkatkan alur deployment dan kesiapan UAT, berkontribusi pada pencapaian KPI divisi dengan peningkatan performa hingga 4× dibanding baseline sebelumnya.", en: "Deployment Optimization: improved deployment workflows and UAT readiness, contributing to division KPI achievement with up to 4× performance improvement compared to the previous baseline." },
+      { id: "Production Deployment: membantu rilis produksi dengan tingkat keberhasilan deployment tepat jadwal sekitar 75% pada proyek yang ditangani.", en: "Production Deployment: assisted production releases, achieving an approximately 75% on-schedule deployment success rate across assigned projects." },
+      { id: "System Integration: ikut integrasi end-to-end sistem enterprise untuk memastikan interoperabilitas yang andal dan mendukung proses bisnis kritis.", en: "System Integration: participated in end-to-end integration of enterprise systems, ensuring reliable interoperability and supporting critical business processes." },
+      { id: "Data Processing & Environment Support: ekstraksi, persiapan, dan validasi data massal (nasabah, pengguna, pinjaman, pembayaran) untuk skenario UAT dan menjaga environment pengujian tetap konsisten.", en: "Data Processing & Environment Support: performed bulk data extraction, preparation, and validation of customer, user, loan, and payment data to support UAT scenarios and maintain consistent testing environments." },
+      { id: "Version Control & Deployment Validation: memakai Git untuk version control, build tracking, dan validasi deployment agar integritas kode terjaga di lingkungan development dan testing.", en: "Version Control & Deployment Validation: utilized Git for version control, build tracking, and deployment validation to ensure code integrity across development and testing environments." },
     ],
   },
   {
@@ -193,9 +195,10 @@ export const EXPERIENCE: { period: L; title: L; org: string; logo: string; desc:
       en: "Managed BNCC social media and media partnerships.",
     },
     points: [
-      { id: "Mengelola Instagram BNCC dan membuat konten Reels yang menjangkau banyak penonton.", en: "Managed BNCC's Instagram and produced Reels content that reached a wide audience." },
-      { id: "Menyusun standar pembuatan konten dan memastikan konten sesuai SOP.", en: "Created content standards and ensured posts followed the SOP." },
-      { id: "Berkontribusi pada banyak kemitraan media dalam waktu singkat.", en: "Contributed to many media partnerships in a short time." },
+      { id: "Mengelola Instagram BNCC dengan 6.000+ pengikut dan membuat konten Reels dengan total 40.000+ penayangan.", en: "Managed BNCC's Instagram (6,000+ followers) and produced Reels content with 40,000+ total views." },
+      { id: "Memeriksa insight media sosial setiap bulan dan menyusun standar pembuatan konten.", en: "Reviewed social media insights monthly and created the content-making standard." },
+      { id: "Memastikan konten aman dipublikasikan dan sesuai SOP.", en: "Made sure content was safe to post and followed the SOP." },
+      { id: "Berkontribusi pada 60+ kemitraan media dalam 2 kuartal dan mewakili BNCC di beberapa acara mitra.", en: "Contributed to 60+ media partnerships within 2 quarters and represented BNCC at several partner events." },
     ],
   },
 ];
@@ -211,4 +214,12 @@ export const EDUCATION: { period: string; school: string; logo: string; major: L
       en: "GPA 3.39/4.00. Emphasis on Software Engineering, Machine Learning, and Data Analytics. Thesis: “Robustness of LSTM-Based Indonesian Sign Language Recognition System.”",
     },
   },
+];
+
+export const CERTIFICATIONS: { title: string; org: string; period: string }[] = [
+  { title: "Microsoft Azure AI Fundamentals", org: "Bina Nusantara University (BINUS)", period: "Jul 2026 — Jul 2027" },
+];
+
+export const HONORS: { title: string; year: string }[] = [
+  { title: "Semifinals of FindIT Hackathon, DTETI FT UGM", year: "2024" },
 ];
