@@ -66,9 +66,56 @@ export type Project = {
   year: string;
   demo?: string;
   repo?: string;
+  confidential?: boolean;
+  image?: { src: string; alt: L; w: number; h: number };
+  problem?: L;
+  thinking?: L;
+  role?: L;
+  workflow?: L[];
+  impact?: L;
 };
 
 export const PROJECTS: Project[] = [
+  {
+    slug: "it-helpdesk-dashboard",
+    title: "IT-Helpdesk Dashboard",
+    summary: {
+      id: "Dashboard Power BI untuk memantau tiket IT (Incident dan Work Order): volume tiket, kepatuhan SLA response dan resolution, serta backlog berdasarkan umur tiket.",
+      en: "A Power BI dashboard for monitoring IT tickets (Incidents and Work Orders): ticket volume, SLA response and resolution compliance, and backlog by age.",
+    },
+    stack: ["Power BI", "DAX", "Data Analysis", "Data Visualization"],
+    year: "2026",
+    confidential: true,
+    image: {
+      src: "/projects/helpdesk/helpdesk-dashboard.png",
+      alt: { id: "Ringkasan enam halaman IT-Helpdesk Dashboard (data disamarkan)", en: "Overview of the six pages of the IT-Helpdesk Dashboard (anonymized)" },
+      w: 3540,
+      h: 1934,
+    },
+    problem: {
+      id: "Data tiket tersebar di dua sistem (arsip lama dan platform ITSM yang berjalan), sehingga sulit melihat gambaran utuh volume tiket, kecepatan respons, dan tiket yang menumpuk.",
+      en: "Ticket data was spread across two systems (a legacy archive and the live ITSM platform), making it hard to see the full picture of ticket volume, response speed, and piled-up tickets.",
+    },
+    thinking: {
+      id: "Aku memetakan dulu kedua sumber data dan definisi SLA-nya sebelum membuat visual apa pun. Fokusku menampilkan metrik yang benar-benar dipakai tim Ops & Support, bukan sekadar banyak grafik: status tiket, waktu respons, waktu penyelesaian, dan umur backlog.",
+      en: "I mapped both data sources and their SLA definitions before building any visual. My focus was on the metrics Ops & Support actually use, not just more charts: ticket status, response time, resolution time, and backlog age.",
+    },
+    role: {
+      id: "IT Digital Intern (analisis data dan pembuatan dashboard)",
+      en: "IT Digital Intern (data analysis and dashboard development)",
+    },
+    workflow: [
+      { id: "Mengumpulkan dan merapikan data tiket Incident dan Work Order dari dua sumber.", en: "Collected and cleaned Incident and Work Order ticket data from two sources." },
+      { id: "Membuat data model di Power BI dan measure DAX untuk SLA response dan SLA resolution.", en: "Built the Power BI data model and DAX measures for SLA response and SLA resolution." },
+      { id: "Membuat aging backlog dan beban per assignee, dipisah untuk antrean IT dan antrean bisnis.", en: "Built backlog aging and per-assignee workload views, split into IT and business queues." },
+      { id: "Menyusun enam halaman dengan filter per source, tipe tiket, dan periode.", en: "Designed six report pages with filters for source, ticket type, and period." },
+      { id: "Menyajikan hasilnya untuk laporan Ops & Support.", en: "Presented the results for Ops & Support reporting." },
+    ],
+    impact: {
+      id: "Tim mendapat satu tampilan untuk memantau volume tiket, kepatuhan SLA, dan backlog lama, lengkap dengan daftar tiket yang perlu ditindaklanjuti.",
+      en: "The team gained a single view to monitor ticket volume, SLA compliance, and aging backlog, with drill-down lists of tickets to follow up.",
+    },
+  },
   {
     slug: "robustness-sign-language",
     title: "Robustness of Sign Language Recognition",
