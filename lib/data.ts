@@ -215,11 +215,3 @@ export const EDUCATION: { period: string; school: string; logo: string; major: L
     },
   },
 ];
-
-export const CERTIFICATIONS: { title: string; org: string; period: string }[] = [
-  { title: "Microsoft Azure AI Fundamentals", org: "Bina Nusantara University (BINUS)", period: "Jul 2026 — Jul 2027" },
-];
-
-export const HONORS: { title: string; year: string }[] = [
-  { title: "Semifinals of FindIT Hackathon, DTETI FT UGM", year: "2024" },
-];
