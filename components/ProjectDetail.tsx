@@ -9,7 +9,7 @@ const T = {
   role: { id: "Peran", en: "Role" },
   workflow: { id: "Alur Kerja", en: "Workflow" },
   impact: { id: "Dampak", en: "Impact" },
-  confidential: { id: "Proyek ini bersifat rahasia dan tidak dapat ditampilkan secara publik.", en: "This project is confidential and cannot be viewed publicly." },
+  confidential: { id: "Tampilan telah dianonimkan: logo, nama, nomor tiket, dan waktu detail disamarkan.", en: "Screenshots are anonymized: logo, names, ticket numbers, and detailed timestamps are redacted." },
 };
 
 function Block({ title, children }: { title: string; children: React.ReactNode }) {
@@ -34,6 +34,12 @@ export function ProjectDetail({ slug }: { slug: string }) {
       <ul className="mt-5 flex flex-wrap gap-2">
         {p.stack.map((s) => <li key={s} className="chip">{s}</li>)}
       </ul>
+      {p.image && (
+        <a href={p.image.src} target="_blank" rel="noopener noreferrer" className="card mt-8 block overflow-hidden p-2" title={p.image.alt[lang]}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={p.image.src} alt={p.image.alt[lang]} width={p.image.w} height={p.image.h} className="h-auto w-full" />
+        </a>
+      )}
       {p.problem && <Block title={T.problem[lang]}><p className="leading-relaxed text-muted">{p.problem[lang]}</p></Block>}
       {p.thinking && <Block title={T.thinking[lang]}><p className="leading-relaxed text-muted">{p.thinking[lang]}</p></Block>}
       {p.role && <Block title={T.role[lang]}><p>{p.role[lang]}</p></Block>}
@@ -48,7 +54,7 @@ export function ProjectDetail({ slug }: { slug: string }) {
       )}
       {p.impact && <Block title={T.impact[lang]}><p className="leading-relaxed text-muted">{p.impact[lang]}</p></Block>}
       {p.confidential && (
-        <p className="card mt-8 p-3 text-muted">🔒 {T.confidential[lang]}</p>
+        <p className="card mt-8 p-3 text-muted">{T.confidential[lang]}</p>
       )}
       <div className="mt-6 flex gap-5 px text-[0.65rem] uppercase">
         {p.demo && <a href={p.demo} className="text-accent hover:underline">{UI.demo[lang]} ↗</a>}
