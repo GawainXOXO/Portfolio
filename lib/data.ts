@@ -90,7 +90,7 @@ export const PROJECTS: Project[] = [
       src: "/projects/helpdesk/helpdesk-dashboard.png",
       alt: { id: "Ringkasan enam halaman IT-Helpdesk Dashboard (data disamarkan)", en: "Overview of the six pages of the IT-Helpdesk Dashboard (anonymized)" },
       w: 3540,
-      h: 1934,
+      h: 1919,
     },
     problem: {
       id: "Data tiket tersebar di dua sistem (arsip lama dan platform ITSM yang berjalan), sehingga sulit melihat gambaran utuh volume tiket, kecepatan respons, dan tiket yang menumpuk.",
