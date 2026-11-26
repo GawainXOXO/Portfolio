@@ -81,8 +81,8 @@ export const PROJECTS: Project[] = [
     slug: "it-helpdesk-dashboard",
     title: "IT-Helpdesk Dashboard",
     summary: {
-      id: "Dashboard Power BI untuk memantau tiket IT (Incident dan Work Order): volume tiket, kepatuhan SLA response dan resolution, serta backlog berdasarkan umur tiket.",
-      en: "A Power BI dashboard for monitoring IT tickets (Incidents and Work Orders): ticket volume, SLA response and resolution compliance, and backlog by age.",
+      id: "Dashboard untuk memantau tiket IT (Incident dan Work Order): volume tiket, kepatuhan SLA response dan resolution, serta backlog berdasarkan umur tiket.",
+      en: "A dashboard for monitoring IT tickets (Incidents and Work Orders): ticket volume, SLA response and resolution compliance, and backlog by age.",
     },
     stack: ["Power BI", "DAX", "Data Analysis", "Data Visualization"],
     year: "2026",
@@ -108,7 +108,7 @@ export const PROJECTS: Project[] = [
     },
     workflow: [
       { id: "Mengumpulkan dan merapikan data tiket Incident dan Work Order dari dua sumber.", en: "Collected and cleaned Incident and Work Order ticket data from two sources." },
-      { id: "Membuat data model di Power BI dan measure DAX untuk SLA response dan SLA resolution.", en: "Built the Power BI data model and DAX measures for SLA response and SLA resolution." },
+      { id: "Membuat data model dan measure DAX untuk SLA response dan SLA resolution.", en: "Built the data model and DAX measures for SLA response and SLA resolution." },
       { id: "Membuat aging backlog dan beban per assignee, dipisah untuk antrean IT dan antrean bisnis.", en: "Built backlog aging and per-assignee workload views, split into IT and business queues." },
       { id: "Menyusun enam halaman dengan filter per source, tipe tiket, dan periode.", en: "Designed six report pages with filters for source, ticket type, and period." },
       { id: "Menyajikan hasilnya untuk laporan Ops & Support.", en: "Presented the results for Ops & Support reporting." },
