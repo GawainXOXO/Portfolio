@@ -87,7 +87,7 @@ export const PROJECTS: Project[] = [
     },
     stack: ["Power BI", "DAX", "Data Analysis", "Data Visualization"],
     year: "2026",
-    thumb: "/projects/helpdesk/ticket-summary.png",
+    thumb: "/projects/helpdesk/helpdesk-dashboard.png",
     gallery: [
       { src: "/projects/helpdesk/ticket-summary.png", w: 1126, h: 518, caption: { id: "Ticket Summary: status tiket dan tren harian", en: "Ticket Summary: ticket status and daily trend" } },
       { src: "/projects/helpdesk/overview.png", w: 1119, h: 480, caption: { id: "Overview: volume per tipe, waktu penyelesaian, dan divisi", en: "Overview: volume by type, resolving time, and division" } },
