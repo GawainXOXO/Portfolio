@@ -69,7 +69,6 @@ export type Project = {
   confidential?: boolean;
   image?: { src: string; alt: L; w: number; h: number };
   thumb?: string;
-  gallery?: { src: string; w: number; h: number; caption: L }[];
   problem?: L;
   thinking?: L;
   role?: L;
@@ -88,14 +87,6 @@ export const PROJECTS: Project[] = [
     stack: ["Power BI", "DAX", "Data Analysis", "Data Visualization"],
     year: "2026",
     thumb: "/projects/helpdesk/helpdesk-dashboard.png",
-    gallery: [
-      { src: "/projects/helpdesk/ticket-summary.png", w: 1126, h: 518, caption: { id: "Ticket Summary: status tiket dan tren harian", en: "Ticket Summary: ticket status and daily trend" } },
-      { src: "/projects/helpdesk/overview.png", w: 1119, h: 480, caption: { id: "Overview: volume per tipe, waktu penyelesaian, dan divisi", en: "Overview: volume by type, resolving time, and division" } },
-      { src: "/projects/helpdesk/sla-response.png", w: 1129, h: 477, caption: { id: "SLA Response: antrean dan respons di bawah/di atas 4 jam", en: "SLA Response: queue and responses under/over 4 hours" } },
-      { src: "/projects/helpdesk/sla-resolution.png", w: 1129, h: 478, caption: { id: "SLA Resolution: bucket waktu penyelesaian", en: "SLA Resolution: resolution-time buckets" } },
-      { src: "/projects/helpdesk/pending-it.png", w: 1129, h: 478, caption: { id: "Pending IT: aging backlog dan beban per assignee", en: "Pending IT: backlog aging and per-assignee workload" } },
-      { src: "/projects/helpdesk/pending-business.png", w: 1121, h: 478, caption: { id: "Pending Business: backlog di sisi bisnis", en: "Pending Business: business-side backlog" } },
-    ],
     confidential: true,
     image: {
       src: "/projects/helpdesk/helpdesk-dashboard.png",

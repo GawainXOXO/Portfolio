@@ -40,19 +40,6 @@ export function ProjectDetail({ slug }: { slug: string }) {
           <img src={p.image.src} alt={p.image.alt[lang]} width={p.image.w} height={p.image.h} className="h-auto w-full" />
         </a>
       )}
-      {p.gallery && (
-        <div className="mt-6 grid gap-4 sm:grid-cols-2">
-          {p.gallery.map((g) => (
-            <figure key={g.src} className="card p-2">
-              <a href={g.src} target="_blank" rel="noopener noreferrer">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={g.src} alt={g.caption[lang]} width={g.w} height={g.h} loading="lazy" className="h-auto w-full" />
-              </a>
-              <figcaption className="mt-2 text-sm text-muted">{g.caption[lang]}</figcaption>
-            </figure>
-          ))}
-        </div>
-      )}
       {p.problem && <Block title={T.problem[lang]}><p className="leading-relaxed text-muted">{p.problem[lang]}</p></Block>}
       {p.thinking && <Block title={T.thinking[lang]}><p className="leading-relaxed text-muted">{p.thinking[lang]}</p></Block>}
       {p.role && <Block title={T.role[lang]}><p>{p.role[lang]}</p></Block>}
